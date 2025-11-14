@@ -1,6 +1,6 @@
 site_name: gfcKHz
 site_description: Validation logs and signal-processing deep dives for the metal-sdr project.
-site_url: ""
+site_url: https://gfckhz.github.io/
 copyright: 
 
 theme:
@@ -36,6 +36,11 @@ markdown_extensions:
       toc_depth: 3
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tilde

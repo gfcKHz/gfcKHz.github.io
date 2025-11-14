@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://gfckhz.github.io/TESTING/">
+      
       
       
       
@@ -665,22 +667,22 @@
 <hr />
 <h2 id="phase-1-basic-functionality">Phase 1: Basic Functionality<a class="headerlink" href="#phase-1-basic-functionality" title="Permanent link">&para;</a></h2>
 <h3 id="test-1-backend-listing">Test 1: Backend Listing<a class="headerlink" href="#test-1-backend-listing" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>scripts/capture
-python<span class="w"> </span>batch_capture.py<span class="w"> </span>--list-backends
-</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>scripts/capture
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>batch_capture.py<span class="w"> </span>--list-backends
+</span></code></pre></div>
 <p><strong>Expected output</strong>:
-<div class="highlight"><pre><span></span><code>Available SDR backends:
-  rtl-sdr: available
-  bladerf: unavailable: bladeRF Python library not installed
-</code></pre></div></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Available SDR backends:
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  rtl-sdr: available
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  bladerf: unavailable: bladeRF Python library not installed
+</span></code></pre></div></p>
 <p><strong>Pass criteria</strong>:
 - Shows rtl-sdr as available
 - Shows bladerf as unavailable (until hardware acquired)
 - No errors or exceptions</p>
 <hr />
 <h3 id="test-2-rtl-sdr-capture">Test 2: RTL-SDR Capture<a class="headerlink" href="#test-2-rtl-sdr-capture" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>batch_capture.py<span class="w"> </span>--backend<span class="w"> </span>rtl-sdr<span class="w"> </span>--freq<span class="w"> </span><span class="m">105</span>.9e6<span class="w"> </span>--num-captures<span class="w"> </span><span class="m">1</span>
-</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>batch_capture.py<span class="w"> </span>--backend<span class="w"> </span>rtl-sdr<span class="w"> </span>--freq<span class="w"> </span><span class="m">105</span>.9e6<span class="w"> </span>--num-captures<span class="w"> </span><span class="m">1</span>
+</span></code></pre></div>
 <p><strong>Pass criteria</strong>:
 - Capture completes successfully
 - Creates <code>.sigmf-data</code> and <code>.sigmf-meta</code> files in <code>data/captures/</code>
@@ -691,24 +693,24 @@ python<span class="w"> </span>batch_capture.py<span class="w"> </span>--list-bac
   - <code>[RTL-SDR] Converted Y complex samples</code>
   - <code>Capture 1 complete: capture_YYYYMMDD_HHMMSS.sigmf-data (ID: N)</code></p>
 <p><strong>Verification</strong>:
-<div class="highlight"><pre><span></span><code><span class="c1"># Check files created</span>
-ls<span class="w"> </span>-lh<span class="w"> </span>../../data/captures/*.sigmf-*
-
-<span class="c1"># Check database entry</span>
-sqlite3<span class="w"> </span>../../data/captures/capture_manifest.db<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;SELECT id, center_freq_hz, sample_rate_hz, file_path FROM captures ORDER BY id DESC LIMIT 1;&quot;</span>
-</code></pre></div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Check files created</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ls<span class="w"> </span>-lh<span class="w"> </span>../../data/captures/*.sigmf-*
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Check database entry</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>sqlite3<span class="w"> </span>../../data/captures/capture_manifest.db<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="s2">&quot;SELECT id, center_freq_hz, sample_rate_hz, file_path FROM captures ORDER BY id DESC LIMIT 1;&quot;</span>
+</span></code></pre></div></p>
 <hr />
 <h3 id="test-3-bladerf-error-handling">Test 3: BladeRF Error Handling<a class="headerlink" href="#test-3-bladerf-error-handling" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>batch_capture.py<span class="w"> </span>--backend<span class="w"> </span>bladerf<span class="w"> </span>--freq<span class="w"> </span><span class="m">2</span>.4e9<span class="w"> </span>--num-captures<span class="w"> </span><span class="m">1</span>
-</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>batch_capture.py<span class="w"> </span>--backend<span class="w"> </span>bladerf<span class="w"> </span>--freq<span class="w"> </span><span class="m">2</span>.4e9<span class="w"> </span>--num-captures<span class="w"> </span><span class="m">1</span>
+</span></code></pre></div>
 <p><strong>Expected output</strong>:
-<div class="highlight"><pre><span></span><code>ERROR: bladeRF Python library not installed. Install with: pip install bladerf
-
-Available backends:
-  rtl-sdr: available
-  bladerf: unavailable: bladeRF Python library not installed
-</code></pre></div></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ERROR: bladeRF Python library not installed. Install with: pip install bladerf
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Available backends:
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  rtl-sdr: available
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>  bladerf: unavailable: bladeRF Python library not installed
+</span></code></pre></div></p>
 <p><strong>Pass criteria</strong>:
 - Raises ImportError with helpful installation message
 - Lists available backends
@@ -716,28 +718,28 @@ Available backends:
 <hr />
 <h2 id="phase-2-edge-cases">Phase 2: Edge Cases<a class="headerlink" href="#phase-2-edge-cases" title="Permanent link">&para;</a></h2>
 <h3 id="test-4-invalid-backend">Test 4: Invalid Backend<a class="headerlink" href="#test-4-invalid-backend" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>batch_capture.py<span class="w"> </span>--backend<span class="w"> </span>invalid<span class="w"> </span>--freq<span class="w"> </span><span class="m">105</span>.9e6
-</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>python<span class="w"> </span>batch_capture.py<span class="w"> </span>--backend<span class="w"> </span>invalid<span class="w"> </span>--freq<span class="w"> </span><span class="m">105</span>.9e6
+</span></code></pre></div>
 <p><strong>Expected output</strong>:
-<div class="highlight"><pre><span></span><code>ERROR: Unknown backend: invalid. Supported: rtl-sdr, bladerf
-
-Available backends:
-  rtl-sdr: available
-  bladerf: unavailable: ...
-</code></pre></div></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ERROR: Unknown backend: invalid. Supported: rtl-sdr, bladerf
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Available backends:
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>  rtl-sdr: available
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  bladerf: unavailable: ...
+</span></code></pre></div></p>
 <p><strong>Pass criteria</strong>:
 - Shows clear error message
 - Lists supported backends
 - Exits gracefully</p>
 <hr />
 <h3 id="test-5-out-of-range-frequency-rtl-sdr">Test 5: Out of Range Frequency (RTL-SDR)<a class="headerlink" href="#test-5-out-of-range-frequency-rtl-sdr" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># Too high (RTL-SDR max is 1.766 GHz)</span>
-python<span class="w"> </span>batch_capture.py<span class="w"> </span>--backend<span class="w"> </span>rtl-sdr<span class="w"> </span>--freq<span class="w"> </span>10e9
-</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Too high (RTL-SDR max is 1.766 GHz)</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>python<span class="w"> </span>batch_capture.py<span class="w"> </span>--backend<span class="w"> </span>rtl-sdr<span class="w"> </span>--freq<span class="w"> </span>10e9
+</span></code></pre></div>
 <p><strong>Expected output</strong>:
-<div class="highlight"><pre><span></span><code>ERROR: Frequency 10000.0 MHz out of range for rtl-sdr
-       Supported range: 24.0 - 1766.0 MHz
-</code></pre></div></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ERROR: Frequency 10000.0 MHz out of range for rtl-sdr
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>       Supported range: 24.0 - 1766.0 MHz
+</span></code></pre></div></p>
 <p><strong>Pass criteria</strong>:
 - Catches frequency out of range before attempting capture
 - Shows valid frequency range for backend
@@ -745,60 +747,60 @@ python<span class="w"> </span>batch_capture.py<span class="w"> </span>--backend<
 <hr />
 <h3 id="test-6-backward-compatibility">Test 6: Backward Compatibility<a class="headerlink" href="#test-6-backward-compatibility" title="Permanent link">&para;</a></h3>
 <p><strong>Test existing captures still work</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Process old captures with fingerprinting</span>
-<span class="nb">cd</span><span class="w"> </span>../fingerprinting
-python<span class="w"> </span>process_fingerprints.py
-</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Process old captures with fingerprinting</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">cd</span><span class="w"> </span>../fingerprinting
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>python<span class="w"> </span>process_fingerprints.py
+</span></code></pre></div>
 <p><strong>Pass criteria</strong>:
 - Old .sigmf-data files load successfully
 - Fingerprinting extracts features without errors
 - Database queries work unchanged</p>
 <p><strong>Test database schema</strong>:</p>
-<div class="highlight"><pre><span></span><code>sqlite3<span class="w"> </span>../../data/captures/capture_manifest.db<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">&quot;.schema captures&quot;</span>
-</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sqlite3<span class="w"> </span>../../data/captures/capture_manifest.db<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="s2">&quot;.schema captures&quot;</span>
+</span></code></pre></div>
 <p><strong>Pass criteria</strong>:
 - Schema unchanged from before refactor
 - All columns present: id, timestamp, center_freq_hz, sample_rate_hz, etc.</p>
 <hr />
 <h2 id="phase-3-integration-testing">Phase 3: Integration Testing<a class="headerlink" href="#phase-3-integration-testing" title="Permanent link">&para;</a></h2>
 <h3 id="test-7-end-to-end-pipeline">Test 7: End-to-End Pipeline<a class="headerlink" href="#test-7-end-to-end-pipeline" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># Capture → Process → Fingerprint</span>
-<span class="nb">cd</span><span class="w"> </span>scripts/capture
-python<span class="w"> </span>batch_capture.py<span class="w"> </span>--backend<span class="w"> </span>rtl-sdr<span class="w"> </span>--freq<span class="w"> </span><span class="m">105</span>.9e6<span class="w"> </span>--num-captures<span class="w"> </span><span class="m">1</span>
-
-<span class="nb">cd</span><span class="w"> </span>../fingerprinting
-python<span class="w"> </span>process_fingerprints.py
-</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Capture → Process → Fingerprint</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">cd</span><span class="w"> </span>scripts/capture
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>python<span class="w"> </span>batch_capture.py<span class="w"> </span>--backend<span class="w"> </span>rtl-sdr<span class="w"> </span>--freq<span class="w"> </span><span class="m">105</span>.9e6<span class="w"> </span>--num-captures<span class="w"> </span><span class="m">1</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="nb">cd</span><span class="w"> </span>../fingerprinting
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>python<span class="w"> </span>process_fingerprints.py
+</span></code></pre></div>
 <p><strong>Pass criteria</strong>:
 - Capture creates .sigmf-data file
 - Database logs capture
 - Fingerprinting extracts features
 - Database contains fingerprint entry</p>
 <p><strong>Verification</strong>:
-<div class="highlight"><pre><span></span><code>sqlite3<span class="w"> </span>../../data/captures/capture_manifest.db<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
-<span class="s">SELECT</span>
-<span class="s">  c.id,</span>
-<span class="s">  c.center_freq_hz/1e6 as freq_mhz,</span>
-<span class="s">  f.peak_freq_hz/1e6 as peak_mhz,</span>
-<span class="s">  f.cnr_db</span>
-<span class="s">FROM captures c</span>
-<span class="s">LEFT JOIN fingerprints f ON c.id = f.capture_id</span>
-<span class="s">ORDER BY c.id DESC</span>
-<span class="s">LIMIT 1;</span>
-<span class="s">EOF</span>
-</code></pre></div></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>sqlite3<span class="w"> </span>../../data/captures/capture_manifest.db<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="s">SELECT</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="s">  c.id,</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="s">  c.center_freq_hz/1e6 as freq_mhz,</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="s">  f.peak_freq_hz/1e6 as peak_mhz,</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="s">  f.cnr_db</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="s">FROM captures c</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="s">LEFT JOIN fingerprints f ON c.id = f.capture_id</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="s">ORDER BY c.id DESC</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="s">LIMIT 1;</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="s">EOF</span>
+</span></code></pre></div></p>
 <p><strong>Expected</strong>: Shows capture with associated fingerprint</p>
 <hr />
 <h2 id="phase-4-stress-testing">Phase 4: Stress Testing<a class="headerlink" href="#phase-4-stress-testing" title="Permanent link">&para;</a></h2>
 <h3 id="test-8-multi-capture-batch">Test 8: Multi-Capture Batch<a class="headerlink" href="#test-8-multi-capture-batch" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># Small batch to verify stability</span>
-python<span class="w"> </span>batch_capture.py<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--backend<span class="w"> </span>rtl-sdr<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--freq<span class="w"> </span><span class="m">105</span>.9e6<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--num-captures<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--interval<span class="w"> </span><span class="m">10</span>
-</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Small batch to verify stability</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>python<span class="w"> </span>batch_capture.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span>--backend<span class="w"> </span>rtl-sdr<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">  </span>--freq<span class="w"> </span><span class="m">105</span>.9e6<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">  </span>--num-captures<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">  </span>--interval<span class="w"> </span><span class="m">10</span>
+</span></code></pre></div>
 <p><strong>Pass criteria</strong>:
 - All 5 captures complete successfully
 - No memory leaks (monitor with <code>top</code> or <code>htop</code>)
@@ -821,14 +823,14 @@ python<span class="w"> </span>batch_capture.py<span class="w"> </span><span clas
 <hr />
 <h2 id="regression-testing">Regression Testing<a class="headerlink" href="#regression-testing" title="Permanent link">&para;</a></h2>
 <p>Before any commit that modifies capture code, run:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Quick regression test</span>
-<span class="nb">cd</span><span class="w"> </span>scripts/capture
-python<span class="w"> </span>batch_capture.py<span class="w"> </span>--list-backends
-python<span class="w"> </span>batch_capture.py<span class="w"> </span>--backend<span class="w"> </span>rtl-sdr<span class="w"> </span>--freq<span class="w"> </span><span class="m">105</span>.9e6<span class="w"> </span>--num-captures<span class="w"> </span><span class="m">1</span>
-
-<span class="nb">cd</span><span class="w"> </span>../fingerprinting
-python<span class="w"> </span>process_fingerprints.py<span class="w"> </span>--file<span class="w"> </span><span class="s2">&quot;../../data/captures/capture_*.sigmf-data&quot;</span>
-</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># Quick regression test</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nb">cd</span><span class="w"> </span>scripts/capture
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>python<span class="w"> </span>batch_capture.py<span class="w"> </span>--list-backends
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>python<span class="w"> </span>batch_capture.py<span class="w"> </span>--backend<span class="w"> </span>rtl-sdr<span class="w"> </span>--freq<span class="w"> </span><span class="m">105</span>.9e6<span class="w"> </span>--num-captures<span class="w"> </span><span class="m">1</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="nb">cd</span><span class="w"> </span>../fingerprinting
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>python<span class="w"> </span>process_fingerprints.py<span class="w"> </span>--file<span class="w"> </span><span class="s2">&quot;../../data/captures/capture_*.sigmf-data&quot;</span>
+</span></code></pre></div>
 <p>All tests should pass with no errors.</p>
 
 
