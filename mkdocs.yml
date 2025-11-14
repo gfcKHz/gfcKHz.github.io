@@ -61,6 +61,6 @@ extra_javascript:
 nav:
   - Posts:
       - "Ghost in the Capture":
-          - Introduction: posts/fm-validation.md
-          - Latent Space: posts/fm-geometry.md
-          - Entropy: posts/fm-cryptography.md
+          - Introduction: posts/capture.md
+          - Latent Space: posts/space.md
+          - Entropy: posts/entropy.md
