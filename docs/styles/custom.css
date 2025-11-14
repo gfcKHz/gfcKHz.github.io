@@ -200,6 +200,12 @@ body,
   margin-top: 3rem;
 }
 
+.md-typeset blockquote {
+  background-color: rgba(100, 120, 180, 0.15) !important;
+  border-left: 4px solid rgba(165, 166, 255, 0.5) !important;
+  color: #d0d0d0 !important;
+}
+
 @media screen and (min-width: 60rem) {
   .md-content {
     max-width: 840px;
