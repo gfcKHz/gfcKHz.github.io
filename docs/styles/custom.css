@@ -29,36 +29,34 @@
   background-color: #050505;
 }
 
-[data-md-color-scheme="default"] html,
-[data-md-color-scheme="default"] body,
-[data-md-color-scheme="default"] .md-main,
-[data-md-color-scheme="default"] .md-main__inner,
-[data-md-color-scheme="default"] .md-content,
-[data-md-color-scheme="default"] .md-content__inner {
+body[data-md-color-scheme="default"],
+body[data-md-color-scheme="default"] .md-main,
+body[data-md-color-scheme="default"] .md-main__inner,
+body[data-md-color-scheme="default"] .md-content,
+body[data-md-color-scheme="default"] .md-content__inner {
   background: #ffffff !important;
   color: #1a1a1a !important;
 }
 
-[data-md-color-scheme="default"] .md-typeset {
+body[data-md-color-scheme="default"] .md-typeset {
   color: #1a1a1a !important;
 }
 
-[data-md-color-scheme="default"] .md-typeset p,
-[data-md-color-scheme="default"] .md-typeset h1,
-[data-md-color-scheme="default"] .md-typeset h2,
-[data-md-color-scheme="default"] .md-typeset h3,
-[data-md-color-scheme="default"] .md-typeset h4,
-[data-md-color-scheme="default"] .md-typeset h5,
-[data-md-color-scheme="default"] .md-typeset h6 {
+body[data-md-color-scheme="default"] .md-typeset p,
+body[data-md-color-scheme="default"] .md-typeset h1,
+body[data-md-color-scheme="default"] .md-typeset h2,
+body[data-md-color-scheme="default"] .md-typeset h3,
+body[data-md-color-scheme="default"] .md-typeset h4,
+body[data-md-color-scheme="default"] .md-typeset h5,
+body[data-md-color-scheme="default"] .md-typeset h6 {
   color: #1a1a1a !important;
 }
 
-[data-md-color-scheme="slate"] html,
-[data-md-color-scheme="slate"] body,
-[data-md-color-scheme="slate"] .md-main,
-[data-md-color-scheme="slate"] .md-main__inner,
-[data-md-color-scheme="slate"] .md-content,
-[data-md-color-scheme="slate"] .md-content__inner {
+body[data-md-color-scheme="slate"],
+body[data-md-color-scheme="slate"] .md-main,
+body[data-md-color-scheme="slate"] .md-main__inner,
+body[data-md-color-scheme="slate"] .md-content,
+body[data-md-color-scheme="slate"] .md-content__inner {
   background: #050505;
 }
 
@@ -236,13 +234,13 @@
   margin-top: 3rem;
 }
 
-[data-md-color-scheme="default"] .md-typeset blockquote {
+body[data-md-color-scheme="default"] .md-typeset blockquote {
   background-color: rgba(90, 91, 255, 0.08) !important;
   border-left: 4px solid rgba(90, 91, 255, 0.4) !important;
   color: #2a2a2a !important;
 }
 
-[data-md-color-scheme="slate"] .md-typeset blockquote {
+body[data-md-color-scheme="slate"] .md-typeset blockquote {
   background-color: rgba(100, 120, 180, 0.15) !important;
   border-left: 4px solid rgba(165, 166, 255, 0.5) !important;
   color: #d0d0d0 !important;
@@ -274,4 +272,3 @@ html {
   border: none !important;
   box-shadow: none !important;
 }
-

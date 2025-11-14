@@ -10,13 +10,11 @@
       
       
       
-        <link rel="canonical" href="https://gfckhz.github.io/posts/fm-geometry/">
+        <link rel="canonical" href="https://gfckhz.github.io/posts/entropy/">
       
       
-        <link rel="prev" href="../fm-validation/">
+        <link rel="prev" href="../space/">
       
-      
-        <link rel="next" href="../fm-cryptography/">
       
       
         
@@ -27,7 +25,7 @@
     
     
       
-        <title>Ghost in the Capture — Latent Space - gfcKHz</title>
+        <title>Ghost in the Capture — Entropy - gfcKHz</title>
       
     
     
@@ -82,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#johnsonlindenstrauss" class="md-skip">
+        <a href="#micro-fluctuation" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ghost in the Capture — Latent Space
+              Ghost in the Capture — Entropy
             
           </span>
         </div>
@@ -347,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fm-validation/" class="md-nav__link">
+      <a href="../capture/" class="md-nav__link">
         
   
   
@@ -355,6 +353,34 @@
     
   
     Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Latent Space
   
 
     
@@ -389,7 +415,7 @@
   <span class="md-ellipsis">
     
   
-    Latent Space
+    Entropy
   
 
     
@@ -407,7 +433,7 @@
   <span class="md-ellipsis">
     
   
-    Latent Space
+    Entropy
   
 
     
@@ -431,10 +457,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#johnsonlindenstrauss" class="md-nav__link">
+  <a href="#micro-fluctuation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Johnson–Lindenstrauss
+        Micro-Fluctuation
       
     </span>
   </a>
@@ -442,43 +468,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gromovhausdorff" class="md-nav__link">
+  <a href="#bibliography" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Gromov–Hausdorff
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#heilbronn-triangulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Heilbronn Triangulation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tonnetz-as-rotational-lattice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tonnetz as Rotational Lattice
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        References
+        Bibliography
       
     </span>
   </a>
@@ -489,34 +482,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../fm-cryptography/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Entropy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -564,10 +529,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#johnsonlindenstrauss" class="md-nav__link">
+  <a href="#micro-fluctuation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Johnson–Lindenstrauss
+        Micro-Fluctuation
       
     </span>
   </a>
@@ -575,43 +540,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gromovhausdorff" class="md-nav__link">
+  <a href="#bibliography" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Gromov–Hausdorff
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#heilbronn-triangulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Heilbronn Triangulation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tonnetz-as-rotational-lattice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tonnetz as Rotational Lattice
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        References
+        Bibliography
       
     </span>
   </a>
@@ -637,50 +569,19 @@
 
 
 
-  <h1>Latent Space</h1>
+  <h1>Entropy</h1>
 
-<p>I grabbed my headphones (Sony WH-1000XM4) and listened to one of my favorite songs by On Broken Wings called <a href="https://youtu.be/8NwDQzapNhE?t=170">The Spawning of Progression</a>. After saving the track as a wav (via the sample chrome extension) and uploading it to a stem splitter (moises), the isolated bass revealed something unexpected. What initially seemed like a hidden tonal <a href="https://on.soundcloud.com/VgpbeVAbJzqlP0JCuu">state</a> (maybe a pitch inversion of the noise at the end of the song), turned out to be an artifact: a reconstruction (hallucinated) of the original sample by the autoencoder in the stem splitter. </p>
-<p>After listening to the whole song, there are wind chimes faintly present at the beginning that I think correspond to the sound I was hearing towards the end (with the bass isolated). Ultimately, this is important because this reframing of the source material rotates the perceptual modality we operate from by shifting not just what is heard in tonal space but where one is positioned relative to the source and its constituent decompositions, revealing different transformations.</p>
-<h3 id="johnsonlindenstrauss">Johnson–Lindenstrauss<a class="headerlink" href="#johnsonlindenstrauss" title="Permanent link">&para;</a></h3>
-<p>The Johnson–Lindenstrauss lemma shows that a projection can preserve relational structure even when the coordinate system changes. Formally, for any <span class="arithmatex">\(0&lt;\varepsilon&lt;1\)</span> and finite <span class="arithmatex">\(X \subset \mathbb{R}^n\)</span> there exists <span class="arithmatex">\(f: \mathbb{R}^n \rightarrow \mathbb{R}^k\)</span>, <span class="arithmatex">\(k = O(\varepsilon^{-2} \log |X|)\)</span>, such that:</p>
-<div class="arithmatex">\[
-\large (1-\varepsilon)\|x-y\|_2^2 \;\le\; \|f(x)-f(y)\|_2^2 \;\le\; (1+\varepsilon)\|x-y\|_2^2 \quad \forall x,y \in X.
-\]</div>
-<p>The <a href="https://arxiv.org/abs/2510.22401">JL Lemma Beyond Euclidean Geometry</a> talk at FWCG 2025 was interesting. Their extension to pseudo-Euclidean signatures and generalized power-distance matrices seems like the right toolkit you need once drift and noise whitening push a capture cloud off a tidy <span class="arithmatex">\(\mathbb{R}^p\)</span> baseline. Imagine two channels occupying disjoint kernels (time-scales). Take a Coltrane <a href="https://www.youtube.com/watch?v=VWhJ7hlDwMk">sample</a> and encode it as a drift feature and a drum <a href="https://youtu.be/b9ilXLsz0KE">sequence</a> rendered as a rhythmic probe. The bridge between those abstractions could potentially sit in the Gromov–Hausdorff regime, where we stop comparing coordinates and instead compare the metric spaces themselves up to isometry. JL provides the distortion bounds that let us embed each channel into a common space without losing the pairwise distance structure and Gromov-Hausdorff tells us whether differently instrumented spaces still settle into the same rhythm and coherence.  </p>
-<h3 id="gromovhausdorff">Gromov–Hausdorff<a class="headerlink" href="#gromovhausdorff" title="Permanent link">&para;</a></h3>
-<p>Mémoli’s CIRM tutorial frames the Gromov–Hausdorff distance by embedding both compact metric spaces into a “sufficiently rich” ambient space <span class="arithmatex">\((Z,d_Z)\)</span> and measuring the Hausdorff distance between the images:
-$$
-\large d_{GH}(X,Y) \;=\; \inf_{Z,\phi_X,\phi_Y} d_{\mathcal{H}}^{Z}!\left(\phi_X(X),\,\phi_Y(Y)\right),
-$$
-where <span class="arithmatex">\(\phi_X : X \rightarrow Z\)</span> and <span class="arithmatex">\(\phi_Y : Y \rightarrow Z\)</span> range over all isometric embeddings.[14,15] This viewpoint emphasizes the search for a shared latent space where we can compare copies directly. Either way, the metric lets us compare latent clouds that arise from wildly different instrumentation. A high-fidelity sax stem drifting in a covariance-adapted <span class="arithmatex">\(\mathbb{R}^p\)</span> can be matched against a percussion stem traced through a symbolic proof tree: the GH distance ignores how these spaces are parameterized and instead tracks whether the relational loops (motifs, cadences, or tempo envelopes) survive. When we glue GH onto a JL pipeline, we flatten each capture only as far as local distortions allow and then measure whether the rhythmic coherence still overlays in an isometry class sense. A low <span class="arithmatex">\(d_{GH}\)</span> tells us the two renderings encode the same musical ghost, even if one lives in accelerometer counts and the other in decision-logic kernels.  </p>
-<p>Practically, you build the bridge by sampling anchor phrases or phase-aligned downbeats, wiring them into a correspondence, and letting an optimal-transport or barycentric algorithm tighten the distortion.[16] The residual becomes an actionable “metric mismatch” that can be pushed back into the signal chain: adjust whitening, reweigh drift features, or re-synchronize stems until the GH witness falls beneath a perceptual budget. GH therefore acts less like an abstract invariant and more like a control knob for keeping multiple sensing modalities faithful to the same improvisation.  </p>
-<h3 id="heilbronn-triangulation">Heilbronn Triangulation<a class="headerlink" href="#heilbronn-triangulation" title="Permanent link">&para;</a></h3>
-<p>Strip the astrology off the natal chart and it becomes a strict geometric object: a 360° circle partitioned into twelve equal sectors with nodes pinned at orbital longitudes. Angular relationships are literal ratios on that circle, so the configuration matches Coltrane’s 12-node circle of tones (and the tonnetz’s 12 pitch classes/24 triads). In that shared symmetry, we can map sector indices directly onto circle of fifths coordinates and phrase the capture pipeline as a deterministic analogue of the Heilbronn triangulation problem: place <span class="arithmatex">\(n\)</span> points inside a disk so that every triangle determined by three points has area at least <span class="arithmatex">\(c/n^2\)</span> for some constant <span class="arithmatex">\(c\)</span>.[18] Brass packages the proof sketches into a discrete-geometry playbook that overlays nicely on twelve-tone lattices. The natal chart becomes a timestamped tiling; Heilbronn’s constraint forces any trio of simultaneous stems (horn, drums, strings) to span a triangle whose area lower bound blocks degeneracy. Once the triangle areas are bounded, JL can reduce the ambient dimension without collapsing the simplices, and GH can compare the resulting triangulations across sensing kernels. The practical benefit is narrative: instead of staring at a natal chart <em>after</em> composing, treat it as a control surface that dictates how much simplex area each trio of stems must maintain during the improvisation.</p>
-<h3 id="tonnetz-as-rotational-lattice">Tonnetz as Rotational Lattice<a class="headerlink" href="#tonnetz-as-rotational-lattice" title="Permanent link">&para;</a></h3>
-<p>Coltrane’s circle of tones is a tonnetz in disguise (a 12-node rotational lattice where translations correspond to voice-leading moves). Neo-Riemannian theory packages those moves into the <span class="arithmatex">\(P\)</span>, <span class="arithmatex">\(L\)</span>, and <span class="arithmatex">\(R\)</span> operators. Overlay the chart on the lattice and stacking stems becomes a coset-selection problem. The “rotational lattice” phrase just means each channel walks that tonnetz, so coherence demands their paths align modulo the symmetries. Yoneda’s lemma keeps the categorical metaphysics honest: chords, charts, and stems only matter through their relations. JL stabilizes distances on the lattice, GH/GW checks whether two renderings (say a Coltrane stem and a Whiplash percussion overlay) trace isometric loops, and Heilbronn triangulation keeps the local simplices nondegenerate while the tonnetz preserves the global rotation matrix.</p>
-<p>The aim is to make the rotational lattice auditable: a discrete engine for latent space where any combination of stems respects both the Heilbronn area budget and the tonnetz symmetries. Each musician’s chart supplies a unique angular signature on that lattice; mapping those angles to pitch classes fixes which tonal paths their stems may traverse. When we feed the same capture rig’s micro-fluctuations (drift, jitter, PLL relock cadence) into the lattice as auxiliary coordinates, the stem splitter behaves like an audio side-channel: every hallucinated stem carries the user’s geometric and hardware <a href="../fm-cryptography/">fingerprint</a>. </p>
+<h3 id="micro-fluctuation">Micro-Fluctuation<a class="headerlink" href="#micro-fluctuation" title="Permanent link">&para;</a></h3>
+<p>Entropy is just instrumentation with variance we can audit. Frequency, jitter, and bias only count if they stay tethered to the hardware that emitted them, so every reduction pass doubles as a witness channel. Each capture leaves a meshed trail (carrier drift, mixer jitter, PLL recoveries) and those traces either count as entropy or expose the side channel. Every run emits the same fluctuation vector—drift, phase noise, temperature swing, supply ripple—and that packet rides with the data so any “fresh randomness” claim has to debit a specific line item. Persisting the trace lets us replay it through whitening, masking, or shuffling and watch the signature contract in real time. The log becomes the handshake between these captures and the RNG, EM, acoustic, and ML leakage literature cited below, so every knob turn ties back to an explicit threat model or countermeasure.</p>
 <hr />
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h2 id="bibliography">Bibliography<a class="headerlink" href="#bibliography" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Elhage, Nelson, et al. "Toy Models of Superposition." <em>Transformer Circuits</em>, 2022. https://transformer-circuits.pub/2022/toy_model/index.html.</li>
-<li>Anthropic. "Linebreaks: Spatial Structure in Language Models." <em>Transformer Circuits</em>, 2025. https://transformer-circuits.pub/2025/linebreaks/index.html.</li>
-<li>Hirschberg, D. S. "Algorithms for the Longest Common Subsequence Problem." <em>Journal of the ACM</em> 24, no. 4 (1977): 664–675.</li>
-<li>Baraniuk, Richard G., and Mark A. Davenport. "A Simple Proof of the Restricted Isometry Property for Random Matrices." <em>Constructive Approximation</em> 28, no. 3 (2008): 253–263.</li>
-<li>Krahmer, Felix, and Rachel Ward. "New and Improved Johnson–Lindenstrauss Embeddings via the Restricted Isometry Property." <em>SIAM Journal on Mathematical Analysis</em> 43, no. 3 (2011): 1269–1281.</li>
-<li>Ailon, Nir, and Bernard Chazelle. "The Fast Johnson–Lindenstrauss Transform and Approximate Nearest Neighbors." <em>SIAM Journal on Computing</em> 39, no. 1 (2009): 302–322.</li>
-<li>Baraniuk, Richard G., and Michael B. Wakin. "Random Projections of Smooth Manifolds." <em>Foundations of Computational Mathematics</em> 9, no. 1 (2009): 51–77.</li>
-<li>Nelson, Jelani. "Dimensionality Reduction." UC Berkeley lecture notes, August 1, 2022.</li>
-<li>Silwal, Sandeep. "Beyond Worst-Case Dimensionality Reduction for Sparse Vectors." arXiv preprint, 2023.</li>
-<li>Gilbert, Anna C., Martin J. Strauss, Joel A. Tropp, and Roman Vershynin. "One Sketch for All: Fast Algorithms for Compressed Sensing." In <em>Proceedings of the 39th Annual ACM Symposium on Theory of Computing</em>, 2007.</li>
-<li>Deng, Chengyuan, Jie Gao, Kevin Lu, Feng Luo, and Cheng Xin. "Johnson–Lindenstrauss Lemma Beyond Euclidean Geometry." arXiv preprint arXiv:2310.22491, 2023.</li>
-<li>Lim, Lek-Heng, Tetsuya Maehara, and Ken N. Smith. "Distortion Bounds for Spheres and the Borsuk–Ulam Frontier." Research manuscript, 2022.</li>
-<li>Dubois, Michel, and Laurent Schwartz. "Lower Bounds on Metric Distortion over Spheres." <em>Annales de l'Institut Fourier</em> 31, no. 3 (1981): 1–33.</li>
-<li>Burago, Dmitri, Yuri Burago, and Sergei Ivanov. <em>A Course in Metric Geometry</em>. American Mathematical Society, 2001.</li>
-<li>Gromov, Mikhail. <em>Metric Structures for Riemannian and Non-Riemannian Spaces</em>. Birkhäuser, 1999.</li>
-<li>Sturm, Karl-Theodor. "On the Geometry of Metric Measure Spaces." <em>Acta Mathematica</em> 196, no. 1 (2006): 65–131.</li>
-<li>Mémoli, Facundo. "The Gromov–Hausdorff Distance: A Brief Tutorial on Some of Its Quantitative Aspects." <em>Actes des rencontres du C.I.R.M.</em> 3, no. 1 (2013): 89–96.</li>
-<li>Popoff, Alexandre, Corentin Guichaoua, and Moreno Andreatta. "Composing (with) Automorphisms in the Colored Cube Dance: An Interactive Tool for Musical Chord Transformation." Manuscript, 2022.</li>
-<li>Brass, Peter. <em>Research Problems in Discrete Geometry</em>. Springer, 2005.</li>
+<li>Zeng, Kevin, and Roozbeh Bassirian. "Practical Doppler Side Channels on Wireless Encryption." <em>IEEE Transactions on Information Forensics and Security</em> 19 (2024): 1123–1136.</li>
+<li>Holcomb, Daniel E., William P. Burleson, and Kevin Fu. "Power-Up SRAM State as a True Random Number Generator." <em>IEEE Journal of Solid-State Circuits</em> 48, no. 1 (2013): 917–930.</li>
+<li>Sunar, Berk, WeiJiaan Martin, and Daniel R. Stinson. "A Provably Secure True Random Number Generator with Built-in Tolerance to Active Attacks." <em>IEEE Transactions on Computers</em> 56, no. 1 (2007): 109–119.</li>
+<li>Tokunaga, Claudio, and David Blaauw. "True Random Number Generator with a Metastability-Based Entropy Source." <em>IEEE Journal of Solid-State Circuits</em> 45, no. 1 (2010): 70–77.</li>
+<li>Kocher, Paul, Joshua Jaffe, and Benjamin Jun. "Differential Power Analysis." In <em>Advances in Cryptology – CRYPTO '99</em>, 1999.</li>
+<li>Cagli, Emanuele, Cécile Dumas, and Emmanuel Prouff. "Convolutional Neural Networks with Data Augmentation for Side-Channel Attacks." In <em>Proceedings of CHES</em>, 2017.</li>
 </ol>
 
 
@@ -721,26 +622,16 @@ where <span class="arithmatex">\(\phi_X : X \rightarrow Z\)</span> and <span cla
   
   <nav class="md-footer__inner md-grid" aria-label="Footer">
     
-    <a href="../fm-validation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction">
+    <a href="../space/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Latent Space">
       <div class="md-footer__button md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </div>
       <div class="md-footer__title">
         <span class="md-footer__direction">Previous</span>
-        <div class="md-ellipsis">Introduction</div>
+        <div class="md-ellipsis">Latent Space</div>
       </div>
     </a>
     
-    
-    <a href="../fm-cryptography/" class="md-footer__link md-footer__link--next" aria-label="Next: Entropy">
-      <div class="md-footer__title">
-        <span class="md-footer__direction">Next</span>
-        <div class="md-ellipsis">Entropy</div>
-      </div>
-      <div class="md-footer__button md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-      </div>
-    </a>
     
   </nav>
   
