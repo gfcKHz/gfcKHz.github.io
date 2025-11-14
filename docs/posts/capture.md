@@ -40,7 +40,7 @@ where $P_i$ are log-PSD samples and $\Delta f$ is the FFT bin spacing ([scripts/
 
 ### Carrier-to-Noise ratio needs dimensional consistency
 
-Identical night captures reported CNR swings between 50–72 dB because the numerator summed carrier PSD bins $\left(\sum_{k\in\mathcal{C}} S[k]\right)$ while the denominator used *average* noise PSD $\left(|\mathcal{N}|^{-1} \sum_{k\in\mathcal{N}} S[k]\right)$. That mismatch silently injects ≈22 dB of phantom CNR by counting $|\mathcal{C}|$ extra bins. The correct form compares mean PSD on both sides:
+Identical night captures reported CNR swings between 50-72 dB because the numerator summed carrier PSD bins $\left(\sum_{k\in\mathcal{C}} S[k]\right)$ while the denominator used *average* noise PSD $\left(|\mathcal{N}|^{-1} \sum_{k\in\mathcal{N}} S[k]\right)$. That mismatch silently injects ≈22 dB of phantom CNR by counting $|\mathcal{C}|$ extra bins. The correct form compares mean PSD on both sides:
 
 $$
 \bar{S}_{\text{carrier}} = \frac{1}{|\mathcal{C}|} \sum_{k \in \mathcal{C}} S[k], \qquad
@@ -149,14 +149,16 @@ There’s a companion test for frequency accuracy (parabolic interpolation withi
 
 ---
 
+## We All Knew This Was Coming
+
 > So crazy thing I learned recently, was that most audio models don’t actually operate on audio at all. There are some bespoke ones that do, but the majority convert the audio to a spectrogram then pass that spectrogram into an image2* model. Img2img for new audio, reconstruct the spectrogram with encodec at the output layer. I have also been playing with that, re-representing patches of tokens as a unified vector, representing that vector in a pixel group, with some masked pixels for pattern learning. - SashimiSaketoro
 
 ---
 
-## We All Knew This Was Coming
-
 > “Long-term, >99% of input and output for AI models will be [photons](https://x.com/elonmusk/status/1980430707706196359). Nothing else scales.”  
-> — Elon Musk replying to Andrej Karpathy on DeepSeek-OCR
+> - Elon Musk replying to Andrej Karpathy on DeepSeek-OCR
+
+---
 
 So all the cool kids are beam [splitting](space.md) audio via pixel space and I'm late to the party as usual. This is when it naturally occurred to me that I haven't been paying attention to what's really going on (and it doesn't help that I don't even know where my glasses are right now). Perception is computationally bounded, and [vision](https://en.wikipedia.org/wiki/Human_echolocation#Ben_Underwood) transforms once the perceptual map reshapes to the relational geometry that emerges from constraints. Maybe I'm just intercepting a broadcast from a [CDMA downlink](https://cyclostationary.blog/2016/03/22/csp-estimators-the-strip-spectral-correlation-analyzer/), the kind William mapped long before the noise took [shape](https://cyclostationarity.com/wp-content/uploads/2022/12/202210131027.pdf). 
 
