@@ -909,11 +909,12 @@ P_{\text{carrier}} = \left( \sum_{k \in \mathcal{C}} S[k] \right) \Delta f, \qqu
 <p>So crazy thing I learned recently, was that most audio models don’t actually operate on audio at all. There are some bespoke ones that do, but the majority convert the audio to a spectrogram then pass that spectrogram into an image2* model. Img2img for new audio, reconstruct the spectrogram with encodec at the output layer. I have also been playing with that, re-representing patches of tokens as a unified vector, representing that vector in a pixel group, with some masked pixels for pattern learning. - SashimiSaketoro</p>
 </blockquote>
 <hr />
-<p>So all the cool kids are beam <a href="../space/">splitting</a> audio via pixel space and I'm late to the party as usual. This is when it naturally occurred to me that I haven't been paying attention to what's really going on (and it doesn't help that I don't even know where my glasses are right now). Perception is computationally bounded, and <a href="https://en.wikipedia.org/wiki/Human_echolocation#Ben_Underwood">vision</a> transforms once the perceptual map reshapes to the relational geometry that emerges from constraints. Maybe I'm just intercepting a broadcast from a <a href="https://cyclostationary.blog/2016/03/22/csp-estimators-the-strip-spectral-correlation-analyzer/">CDMA downlink</a>, the kind William mapped long before the noise took <a href="https://cyclostationarity.com/wp-content/uploads/2022/12/202210131027.pdf">shape</a>. </p>
 <blockquote>
 <p>“Long-term, &gt;99% of input and output for AI models will be <a href="https://x.com/elonmusk/status/1980430707706196359">photons</a>. Nothing else scales.”<br />
 - Elon Musk replying to Andrej Karpathy on DeepSeek-OCR</p>
 </blockquote>
+<hr />
+<p>So all the cool kids are beam <a href="../space/">splitting</a> audio via pixel space and I'm late to the party as usual. This is when it naturally occurred to me that I haven't been paying attention to what's really going on (and it doesn't help that I don't even know where my glasses are right now). Perception is computationally bounded, and <a href="https://en.wikipedia.org/wiki/Human_echolocation#Ben_Underwood">vision</a> transforms once the perceptual map reshapes to the relational geometry that emerges from constraints. Maybe I'm just intercepting a broadcast from a <a href="https://cyclostationary.blog/2016/03/22/csp-estimators-the-strip-spectral-correlation-analyzer/">CDMA downlink</a>, the kind William mapped long before the noise took <a href="https://cyclostationarity.com/wp-content/uploads/2022/12/202210131027.pdf">shape</a>. </p>
 <hr />
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ol>
