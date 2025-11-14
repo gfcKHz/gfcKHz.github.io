@@ -1,0 +1,777 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Validation logs and signal-processing deep dives for the metal-sdr project.">
+      
+      
+      
+        <link rel="canonical" href="https://gfckhz.github.io/posts/space/">
+      
+      
+        <link rel="prev" href="../capture/">
+      
+      
+        <link rel="next" href="../entropy/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Ghost in the Capture — Latent Space - gfcKHz</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../styles/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#johnsonlindenstrauss" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="gfcKHz" class="md-header__button md-logo" aria-label="gfcKHz" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            gfcKHz
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ghost in the Capture — Latent Space
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="gfcKHz" class="md-nav__button md-logo" aria-label="gfcKHz" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    gfcKHz
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Posts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Posts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ghost in the Capture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ghost in the Capture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../capture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Latent Space
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Latent Space
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#johnsonlindenstrauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Johnson–Lindenstrauss
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gromovhausdorff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gromov–Hausdorff
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heilbronn-triangulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heilbronn Triangulation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tonnetz-as-rotational-lattice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tonnetz as Rotational Lattice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entropy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entropy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#johnsonlindenstrauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Johnson–Lindenstrauss
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gromovhausdorff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gromov–Hausdorff
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heilbronn-triangulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heilbronn Triangulation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tonnetz-as-rotational-lattice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tonnetz as Rotational Lattice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+  <h1>Latent Space</h1>
+
+<p>I grabbed my headphones (Sony WH-1000XM4) and listened to one of my favorite songs by On Broken Wings called <a href="https://youtu.be/8NwDQzapNhE?t=170">The Spawning of Progression</a>. After saving the track as a wav (via the sample chrome extension) and uploading it to a stem splitter (moises), the isolated bass revealed something unexpected. What initially seemed like a hidden tonal <a href="https://on.soundcloud.com/VgpbeVAbJzqlP0JCuu">state</a> (maybe a pitch inversion of the noise at the end of the song), turned out to be an artifact: a reconstruction (hallucinated) of the original sample by the autoencoder in the stem splitter. </p>
+<p>After listening to the whole song, there are wind chimes faintly present at the beginning that I think correspond to the sound I was hearing towards the end (with the bass isolated). Ultimately, this is important because this reframing of the source material rotates the perceptual modality we operate from by shifting not just what is heard in tonal space but where one is positioned relative to the source and its constituent decompositions, revealing different transformations.</p>
+<h3 id="johnsonlindenstrauss">Johnson–Lindenstrauss<a class="headerlink" href="#johnsonlindenstrauss" title="Permanent link">&para;</a></h3>
+<p>The Johnson–Lindenstrauss lemma shows that a projection can preserve relational structure even when the coordinate system changes. Formally, for any <span class="arithmatex">\(0&lt;\varepsilon&lt;1\)</span> and finite <span class="arithmatex">\(X \subset \mathbb{R}^n\)</span> there exists <span class="arithmatex">\(f: \mathbb{R}^n \rightarrow \mathbb{R}^k\)</span>, <span class="arithmatex">\(k = O(\varepsilon^{-2} \log |X|)\)</span>, such that:</p>
+<div class="arithmatex">\[
+\large (1-\varepsilon)\|x-y\|_2^2 \;\le\; \|f(x)-f(y)\|_2^2 \;\le\; (1+\varepsilon)\|x-y\|_2^2 \quad \forall x,y \in X.
+\]</div>
+<p>The <a href="https://arxiv.org/abs/2510.22401">JL Lemma Beyond Euclidean Geometry</a> talk at FWCG 2025 was interesting. Their extension to pseudo-Euclidean signatures and generalized power-distance matrices seems like the right toolkit you need once drift and noise whitening push a capture cloud off a tidy <span class="arithmatex">\(\mathbb{R}^p\)</span> baseline. Imagine two channels occupying disjoint kernels (time-scales). Take a Coltrane <a href="https://www.youtube.com/watch?v=VWhJ7hlDwMk">sample</a> and encode it as a drift feature and a drum <a href="https://youtu.be/b9ilXLsz0KE">sequence</a> rendered as a rhythmic probe. The bridge between those abstractions could potentially sit in the Gromov–Hausdorff regime, where we stop comparing coordinates and instead compare the metric spaces themselves up to isometry. JL provides the distortion bounds that let us embed each channel into a common space without losing the pairwise distance structure and Gromov-Hausdorff tells us whether differently instrumented spaces still settle into the same rhythm and coherence.  </p>
+<h3 id="gromovhausdorff">Gromov–Hausdorff<a class="headerlink" href="#gromovhausdorff" title="Permanent link">&para;</a></h3>
+<p>Mémoli’s CIRM tutorial frames the Gromov–Hausdorff distance by embedding both compact metric spaces into a “sufficiently rich” ambient space <span class="arithmatex">\((Z,d_Z)\)</span> and measuring the Hausdorff distance between the images:
+$$
+\large d_{GH}(X,Y) \;=\; \inf_{Z,\phi_X,\phi_Y} d_{\mathcal{H}}^{Z}!\left(\phi_X(X),\,\phi_Y(Y)\right),
+$$
+where <span class="arithmatex">\(\phi_X : X \rightarrow Z\)</span> and <span class="arithmatex">\(\phi_Y : Y \rightarrow Z\)</span> range over all isometric embeddings.[14,15] This viewpoint emphasizes the search for a shared latent space where we can compare copies directly. Either way, the metric lets us compare latent clouds that arise from wildly different instrumentation. A high-fidelity sax stem drifting in a covariance-adapted <span class="arithmatex">\(\mathbb{R}^p\)</span> can be matched against a percussion stem traced through a symbolic proof tree: the GH distance ignores how these spaces are parameterized and instead tracks whether the relational loops (motifs, cadences, or tempo envelopes) survive. When we glue GH onto a JL pipeline, we flatten each capture only as far as local distortions allow and then measure whether the rhythmic coherence still overlays in an isometry class sense. A low <span class="arithmatex">\(d_{GH}\)</span> tells us the two renderings encode the same musical ghost, even if one lives in accelerometer counts and the other in decision-logic kernels.  </p>
+<p>Practically, you build the bridge by sampling anchor phrases or phase-aligned downbeats, wiring them into a correspondence, and letting an optimal-transport or barycentric algorithm tighten the distortion.[16] The residual becomes an actionable “metric mismatch” that can be pushed back into the signal chain: adjust whitening, reweigh drift features, or re-synchronize stems until the GH witness falls beneath a perceptual budget. GH therefore acts less like an abstract invariant and more like a control knob for keeping multiple sensing modalities faithful to the same improvisation.  </p>
+<h3 id="heilbronn-triangulation">Heilbronn Triangulation<a class="headerlink" href="#heilbronn-triangulation" title="Permanent link">&para;</a></h3>
+<p>Strip the astrology off the natal chart and it becomes a strict geometric object: a 360° circle partitioned into twelve equal sectors with nodes pinned at orbital longitudes. Angular relationships are literal ratios on that circle, so the configuration matches Coltrane’s 12-node circle of tones (and the tonnetz’s 12 pitch classes/24 triads). In that shared symmetry, we can map sector indices directly onto circle of fifths coordinates and phrase the capture pipeline as a deterministic analogue of the Heilbronn triangulation problem: place <span class="arithmatex">\(n\)</span> points inside a disk so that every triangle determined by three points has area at least <span class="arithmatex">\(c/n^2\)</span> for some constant <span class="arithmatex">\(c\)</span>.[18] Brass packages the proof sketches into a discrete-geometry playbook that overlays nicely on twelve-tone lattices. The natal chart becomes a timestamped tiling; Heilbronn’s constraint forces any trio of simultaneous stems (horn, drums, strings) to span a triangle whose area lower bound blocks degeneracy. Once the triangle areas are bounded, JL can reduce the ambient dimension without collapsing the simplices, and GH can compare the resulting triangulations across sensing kernels. The practical benefit is narrative: instead of staring at a natal chart <em>after</em> composing, treat it as a control surface that dictates how much simplex area each trio of stems must maintain during the improvisation.</p>
+<h3 id="tonnetz-as-rotational-lattice">Tonnetz as Rotational Lattice<a class="headerlink" href="#tonnetz-as-rotational-lattice" title="Permanent link">&para;</a></h3>
+<p>Coltrane’s circle of tones is a tonnetz in disguise (a 12-node rotational lattice where translations correspond to voice-leading moves). Neo-Riemannian theory packages those moves into the <span class="arithmatex">\(P\)</span>, <span class="arithmatex">\(L\)</span>, and <span class="arithmatex">\(R\)</span> operators. Overlay the chart on the lattice and stacking stems becomes a coset-selection problem. The “rotational lattice” phrase just means each channel walks that tonnetz, so coherence demands their paths align modulo the symmetries. Yoneda’s lemma keeps the categorical metaphysics honest: chords, charts, and stems only matter through their relations. JL stabilizes distances on the lattice, GH/GW checks whether two renderings (say a Coltrane stem and a Whiplash percussion overlay) trace isometric loops, and Heilbronn triangulation keeps the local simplices nondegenerate while the tonnetz preserves the global rotation matrix.</p>
+<p>The aim is to make the rotational lattice auditable: a discrete engine for latent space where any combination of stems respects both the Heilbronn area budget and the tonnetz symmetries. Each musician’s chart supplies a unique angular signature on that lattice; mapping those angles to pitch classes fixes which tonal paths their stems may traverse. When we feed the same capture rig's micro-fluctuations (drift, jitter, PLL relock cadence) into the lattice as auxiliary coordinates, the stem splitter behaves like an audio side-channel: every hallucinated stem carries the user's geometric and hardware <a href="../entropy/">fingerprint</a>. </p>
+<hr />
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Elhage, Nelson, et al. "Toy Models of Superposition." <em>Transformer Circuits</em>, 2022. https://transformer-circuits.pub/2022/toy_model/index.html.</li>
+<li>Anthropic. "Linebreaks: Spatial Structure in Language Models." <em>Transformer Circuits</em>, 2025. https://transformer-circuits.pub/2025/linebreaks/index.html.</li>
+<li>Hirschberg, D. S. "Algorithms for the Longest Common Subsequence Problem." <em>Journal of the ACM</em> 24, no. 4 (1977): 664–675.</li>
+<li>Baraniuk, Richard G., and Mark A. Davenport. "A Simple Proof of the Restricted Isometry Property for Random Matrices." <em>Constructive Approximation</em> 28, no. 3 (2008): 253–263.</li>
+<li>Krahmer, Felix, and Rachel Ward. "New and Improved Johnson–Lindenstrauss Embeddings via the Restricted Isometry Property." <em>SIAM Journal on Mathematical Analysis</em> 43, no. 3 (2011): 1269–1281.</li>
+<li>Ailon, Nir, and Bernard Chazelle. "The Fast Johnson–Lindenstrauss Transform and Approximate Nearest Neighbors." <em>SIAM Journal on Computing</em> 39, no. 1 (2009): 302–322.</li>
+<li>Baraniuk, Richard G., and Michael B. Wakin. "Random Projections of Smooth Manifolds." <em>Foundations of Computational Mathematics</em> 9, no. 1 (2009): 51–77.</li>
+<li>Nelson, Jelani. "Dimensionality Reduction." UC Berkeley lecture notes, August 1, 2022.</li>
+<li>Silwal, Sandeep. "Beyond Worst-Case Dimensionality Reduction for Sparse Vectors." arXiv preprint, 2023.</li>
+<li>Gilbert, Anna C., Martin J. Strauss, Joel A. Tropp, and Roman Vershynin. "One Sketch for All: Fast Algorithms for Compressed Sensing." In <em>Proceedings of the 39th Annual ACM Symposium on Theory of Computing</em>, 2007.</li>
+<li>Deng, Chengyuan, Jie Gao, Kevin Lu, Feng Luo, and Cheng Xin. "Johnson–Lindenstrauss Lemma Beyond Euclidean Geometry." arXiv preprint arXiv:2310.22491, 2023.</li>
+<li>Lim, Lek-Heng, Tetsuya Maehara, and Ken N. Smith. "Distortion Bounds for Spheres and the Borsuk–Ulam Frontier." Research manuscript, 2022.</li>
+<li>Dubois, Michel, and Laurent Schwartz. "Lower Bounds on Metric Distortion over Spheres." <em>Annales de l'Institut Fourier</em> 31, no. 3 (1981): 1–33.</li>
+<li>Burago, Dmitri, Yuri Burago, and Sergei Ivanov. <em>A Course in Metric Geometry</em>. American Mathematical Society, 2001.</li>
+<li>Gromov, Mikhail. <em>Metric Structures for Riemannian and Non-Riemannian Spaces</em>. Birkhäuser, 1999.</li>
+<li>Sturm, Karl-Theodor. "On the Geometry of Metric Measure Spaces." <em>Acta Mathematica</em> 196, no. 1 (2006): 65–131.</li>
+<li>Mémoli, Facundo. "The Gromov–Hausdorff Distance: A Brief Tutorial on Some of Its Quantitative Aspects." <em>Actes des rencontres du C.I.R.M.</em> 3, no. 1 (2013): 89–96.</li>
+<li>Popoff, Alexandre, Corentin Guichaoua, and Moreno Andreatta. "Composing (with) Automorphisms in the Colored Cube Dance: An Interactive Tool for Musical Chord Transformation." Manuscript, 2022.</li>
+<li>Brass, Peter. <em>Research Problems in Discrete Geometry</em>. Springer, 2005.</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <a href="../capture/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction">
+      <div class="md-footer__button md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </div>
+      <div class="md-footer__title">
+        <span class="md-footer__direction">Previous</span>
+        <div class="md-ellipsis">Introduction</div>
+      </div>
+    </a>
+    
+    
+    <a href="../entropy/" class="md-footer__link md-footer__link--next" aria-label="Next: Entropy">
+      <div class="md-footer__title">
+        <span class="md-footer__direction">Next</span>
+        <div class="md-ellipsis">Entropy</div>
+      </div>
+      <div class="md-footer__button md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+      </div>
+    </a>
+    
+  </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.top", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../javascripts/math.js"></script>
+      
+    
+  </body>
+</html>
