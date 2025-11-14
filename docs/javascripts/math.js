@@ -10,8 +10,14 @@ const renderMath = (root) => {
   });
 };
 
+const renderCurrentPage = () => renderMath(document.body);
+
 if (typeof document$ !== "undefined" && document$.subscribe) {
   document$.subscribe(({ body }) => renderMath(body));
 } else {
-  document.addEventListener("DOMContentLoaded", () => renderMath(document.body));
+  if (document.readyState !== "loading") {
+    renderCurrentPage();
+  } else {
+    document.addEventListener("DOMContentLoaded", renderCurrentPage);
+  }
 }
