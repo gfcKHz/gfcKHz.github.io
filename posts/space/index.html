@@ -475,17 +475,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#listen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Listen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -619,17 +608,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#listen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Listen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -662,6 +640,23 @@
   <h1>Latent Space</h1>
 
 <p>I grabbed my headphones (Sony WH-1000XM4) and listened to one of my favorite songs by On Broken Wings called <a href="https://youtu.be/8NwDQzapNhE?t=170">The Spawning of Progression</a>. After saving the track as a wav (via the sample chrome extension) and uploading it to a stem splitter (moises), the isolated bass revealed something unexpected. What initially seemed like a hidden tonal <a href="https://on.soundcloud.com/VgpbeVAbJzqlP0JCuu">state</a> (maybe a pitch inversion of the noise at the end of the song), turned out to be an artifact: a reconstruction (hallucinated) of the original sample by the autoencoder in the stem splitter. </p>
+<div class="sc-inline-player">
+  <iframe
+    title="Shadow Tonnetz track"
+    width="100%"
+    height="140"
+    scrolling="no"
+    frameborder="no"
+    allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2212604000&color=%23050505&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+  </iframe>
+  <div class="sc-player-meta">
+    <a href="https://soundcloud.com/daejjeon" title="crocodile" target="_blank" rel="noopener">crocodile</a>
+    <span> · </span>
+    <a href="https://soundcloud.com/daejjeon/shadow-tonnetz" title="Shadow Tonnetz" target="_blank" rel="noopener">Shadow Tonnetz</a>
+  </div>
+</div>
+
 <p>After listening to the whole song, there are wind chimes faintly present at the beginning that I think correspond to the sound I was hearing towards the end (with the bass isolated). Ultimately, this is important because this reframing of the source material rotates the perceptual modality we operate from by shifting not just what is heard in tonal space but where one is positioned relative to the source and its constituent decompositions, revealing different transformations.</p>
 <h3 id="johnsonlindenstrauss">Johnson–Lindenstrauss<a class="headerlink" href="#johnsonlindenstrauss" title="Permanent link">&para;</a></h3>
 <p>The Johnson–Lindenstrauss lemma shows that a projection can preserve relational structure even when the coordinate system changes. Formally, for any <span class="arithmatex">\(0&lt;\varepsilon&lt;1\)</span> and finite <span class="arithmatex">\(X \subset \mathbb{R}^n\)</span> there exists <span class="arithmatex">\(f: \mathbb{R}^n \rightarrow \mathbb{R}^k\)</span>, <span class="arithmatex">\(k = O(\varepsilon^{-2} \log |X|)\)</span>, such that:</p>
@@ -681,25 +676,6 @@ where <span class="arithmatex">\(\phi_X : X \rightarrow Z\)</span> and <span cla
 <h3 id="tonnetz-as-rotational-lattice">Tonnetz as Rotational Lattice<a class="headerlink" href="#tonnetz-as-rotational-lattice" title="Permanent link">&para;</a></h3>
 <p>Coltrane’s circle of tones is a tonnetz in disguise (a 12-node rotational lattice where translations correspond to voice-leading moves). Neo-Riemannian theory packages those moves into the <span class="arithmatex">\(P\)</span>, <span class="arithmatex">\(L\)</span>, and <span class="arithmatex">\(R\)</span> operators. Overlay the polar grid on the lattice and stacking stems becomes a coset-selection problem. The “rotational lattice” phrase just means each channel walks that tonnetz, so coherence demands their paths align modulo the symmetries. Yoneda’s lemma keeps the categorical metaphysics honest: chords, angular sectors, and stems only matter through their relations. JL stabilizes distances on the lattice, GH/GW checks whether two renderings (say a Coltrane stem and a Whiplash percussion overlay) trace isometric loops, and Heilbronn triangulation keeps the local simplices nondegenerate while the tonnetz preserves the global rotation matrix.</p>
 <p>The aim is to make the rotational lattice auditable: a discrete engine for latent space where any combination of stems respects both the Heilbronn area budget and the tonnetz symmetries. Hardware micro-fluctuations (drift, jitter, PLL relock cadence) feed into the lattice as auxiliary coordinates, so the stem splitter behaves like an audio side-channel: every hallucinated stem carries the user's geometric and hardware <a href="../entropy/">fingerprint</a>. </p>
-<h3 id="listen">Listen<a class="headerlink" href="#listen" title="Permanent link">&para;</a></h3>
-<div class="sc-inline-player">
-  <iframe
-    title="Johnson–Lindenstrauss track"
-    width="100%"
-    height="166"
-    scrolling="no"
-    frameborder="no"
-    allow="autoplay"
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2211134558&color=%23050505&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-  </iframe>
-  <div class="sc-player-meta">
-    <a href="https://soundcloud.com/daejjeon" title="crocodile" target="_blank" rel="noopener">crocodile</a>
-    <span> · </span>
-    <a href="https://soundcloud.com/daejjeon/cm-transform" title="Johnson–Lindenstrauss" target="_blank" rel="noopener">Johnson–Lindenstrauss</a>
-  </div>
-</div>
-
-<hr />
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Elhage, Nelson, et al. "Toy Models of Superposition." <em>Transformer Circuits</em>, 2022. https://transformer-circuits.pub/2022/toy_model/index.html.</li>
