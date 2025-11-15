@@ -168,11 +168,11 @@ So all the cool kids are beam [splitting](space.md) audio via pixel space and I'
 
 1. Gardner, William A. *Statistical Spectral Analysis: A Nonprobabilistic Theory*. Prentice Hall, 1987. [Cyclostationary coherence framework underpinning the validation heuristics]
 2. Gardner, William A. "A Unifying View of Coherence in Signal Processing." *Signal Processing* 29 (1992): 113–140.
-3. Bradley, Tai-Danae. "The Yoneda Perspective." Math3ma, May 2017. https://www.math3ma.com/blog/the-yoneda-perspective. [Intuition primer that motivates the Yoneda link in plain language]
-4. Ibn al-Haytham. *The Optics of Ibn al-Haytham: Books I–III, On Direct Vision*. Translated with introduction and commentary by A. I. Sabra. London: The Warburg Institute, University of London, 1989. Book 2, Chapter 3, "On the manner of perceiving each of the particular properties."
-5. Reed, Graham T., and Andrew P. Knights. *Silicon Photonics: An Introduction*. Chichester: John Wiley & Sons, 2004. Chapter 8.4, "Raman Excitation."
-6. Wells, H. G. *The Invisible Man*. London: C. Arthur Pearson, 1897.
-7. Spooner, Chad. "Correcting the Record: Comments on Wireless Signal Representation Techniques for Automatic Modulation Classification." (2022).
+3. Spooner, Chad. "Correcting the Record: Comments on Wireless Signal Representation Techniques for Automatic Modulation Classification." (2022).
+4. Bradley, Tai-Danae. "The Yoneda Perspective." Math3ma, May 2017. https://www.math3ma.com/blog/the-yoneda-perspective. [Intuition primer that motivates the Yoneda link in plain language]
+5. Ibn al-Haytham. *The Optics of Ibn al-Haytham: Books I–III, On Direct Vision*. Translated with introduction and commentary by A. I. Sabra. London: The Warburg Institute, University of London, 1989. Book 2, Chapter 3, "On the manner of perceiving each of the particular properties."
+6. Reed, Graham T., and Andrew P. Knights. *Silicon Photonics: An Introduction*. Chichester: John Wiley & Sons, 2004. Chapter 8.4, "Raman Excitation."
+7. Wells, H. G. *The Invisible Man*. London: C. Arthur Pearson, 1897.
 8. Wei, Haoran, Yaofeng Sun, and Yukun Li. "DeepSeek-OCR: Contexts Optical Compression." arXiv:2510.18234 (2025). [Optical context compression for high-accuracy OCR with constrained vision tokens]
 9. Shao, Chenze, Darren Li, Fandong Meng, and Jie Zhou. "Continuous Autoregressive Language Models." arXiv:2510.27688 (2025). [Continuous next-vector generation to increase semantic bandwidth per decoding step]
 10. O'Shea, Timothy J., Johnathan Corgan, and T. Charles Clancy. "Convolutional Radio Modulation Recognition Networks." arXiv:1602.04105 (2016). [CNN baselines for end-to-end modulation recognition]
