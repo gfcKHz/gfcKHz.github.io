@@ -4,7 +4,7 @@ hide:
   - title
 ---
 
-I grabbed my headphones (Sony WH-1000XM4) and listened to one of my favorite songs by On Broken Wings called [The Spawning of Progression](https://youtu.be/8NwDQzapNhE?t=170). After saving the track as a wav (via the sample chrome extension) and uploading it to a stem splitter (moises), the isolated bass revealed something unexpected. What initially seemed like a hidden tonal [state](https://on.soundcloud.com/VgpbeVAbJzqlP0JCuu) (maybe a pitch inversion of the noise at the end of the song), turned out to be an artifact: a reconstruction (hallucinated) of the original sample by the autoencoder in the stem splitter. 
+I grabbed my headphones (Sony WH-1000XM4) and listened to one of my favorite songs by On Broken Wings called [The Spawning of Progression](https://youtu.be/8NwDQzapNhE?t=170). After saving the track as a wav (via the sample chrome extension) and uploading it to a stem splitter (moises), the isolated bass revealed something unexpected. What initially seemed like a hidden tonal state (maybe a pitch inversion of the noise at the end of the song), turned out to be an artifact: a reconstruction (hallucinated) of the original sample by the autoencoder in the stem splitter. 
 
 After listening to the whole song, there are wind chimes faintly present at the beginning that I think correspond to the sound I was hearing towards the end (with the bass isolated). Ultimately, this is important because this reframing of the source material rotates the perceptual modality we operate from by shifting not just what is heard in tonal space but where one is positioned relative to the source and its constituent decompositions, revealing different transformations.
 
