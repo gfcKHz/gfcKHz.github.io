@@ -21,9 +21,11 @@ The [JL Lemma Beyond Euclidean Geometry](https://arxiv.org/abs/2510.22401) talk 
 ### Gromov–Hausdorff
 
 Mémoli’s CIRM tutorial frames the Gromov–Hausdorff distance by embedding both compact metric spaces into a “sufficiently rich” ambient space $(Z,d_Z)$ and measuring the Hausdorff distance between the images:
+
 $$
 \large d_{GH}(X,Y) \;=\; \inf_{Z,\phi_X,\phi_Y} d_{\mathcal{H}}^{Z}\!\left(\phi_X(X),\,\phi_Y(Y)\right),
 $$
+
 where $\phi_X : X \rightarrow Z$ and $\phi_Y : Y \rightarrow Z$ range over all isometric embeddings.[14,15] This viewpoint emphasizes the search for a shared latent space where we can compare copies directly. Either way, the metric lets us compare latent clouds that arise from wildly different instrumentation. A high-fidelity sax stem drifting in a covariance-adapted $\mathbb{R}^p$ can be matched against a percussion stem traced through a symbolic proof tree: the GH distance ignores how these spaces are parameterized and instead tracks whether the relational loops (motifs, cadences, or tempo envelopes) survive. When we glue GH onto a JL pipeline, we flatten each capture only as far as local distortions allow and then measure whether the rhythmic coherence still overlays in an isometry class sense. A low $d_{GH}$ tells us the two renderings encode the same musical ghost, even if one lives in accelerometer counts and the other in decision-logic kernels.  
 
 Practically, you build the bridge by sampling anchor phrases or phase-aligned downbeats, wiring them into a correspondence, and letting an optimal-transport or barycentric algorithm tighten the distortion.[16] The residual becomes an actionable “metric mismatch” that can be pushed back into the signal chain: adjust whitening, reweigh drift features, or re-synchronize stems until the GH witness falls beneath a perceptual budget. GH therefore acts less like an abstract invariant and more like a control knob for keeping multiple sensing modalities faithful to the same improvisation.  
