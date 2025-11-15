@@ -260,28 +260,31 @@ html {
 }
 
 .sc-inline-player {
-  margin: 3rem auto 0;
-  width: min(360px, 100%);
+  margin: 2.5rem auto 3.5rem;
+  width: min(420px, 100%);
   border-radius: 18px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  background: rgba(8, 8, 8, 0.92);
 }
 
 [data-md-color-scheme="default"] .sc-inline-player {
   border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.98);
 }
 
 .sc-inline-player iframe {
   display: block;
   border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .sc-inline-player .sc-player-meta {
   font-size: 0.72rem;
   font-weight: 500;
-  padding: 0.5rem 0.75rem 0.7rem;
+  padding: 0.6rem 0.75rem 0.8rem;
   text-align: center;
 }
 
