@@ -160,7 +160,7 @@ There’s a companion test for frequency accuracy (parabolic interpolation withi
 
 ---
 
-So all the cool kids are beam [splitting](space.md) audio via pixel space and I'm late to the party as usual. This is when it naturally occurred to me that I haven't been paying attention to what's really going on (and it doesn't help that I don't even know where my glasses are right now). Perception is computationally bounded, and [vision](https://en.wikipedia.org/wiki/Human_echolocation#Ben_Underwood) transforms once the perceptual map reshapes to the relational geometry that emerges from constraints. Maybe I'm just intercepting a broadcast from a [CDMA downlink](https://cyclostationary.blog/2016/03/22/csp-estimators-the-strip-spectral-correlation-analyzer/), the kind William mapped long before the noise took [shape](https://cyclostationarity.com/wp-content/uploads/2022/12/202210131027.pdf). 
+So all the cool kids are beam [splitting](space.md) audio through pixel space and I'm late to the party as usual. This is when it naturally occurred to me that I haven't been paying attention to what's really going on (and it doesn't help that I don't even know where my glasses are right now). Perception is computationally bounded, and [vision](https://en.wikipedia.org/wiki/Human_echolocation#Ben_Underwood) transforms once the perceptual map reshapes to the relational geometry that emerges from constraints. Maybe I'm just intercepting a broadcast from a [CDMA downlink](https://cyclostationary.blog/2016/03/22/csp-estimators-the-strip-spectral-correlation-analyzer/), the kind William mapped long before the noise took [shape](https://cyclostationarity.com/wp-content/uploads/2022/12/202210131027.pdf). 
 
 ---
 
