@@ -50,13 +50,13 @@ The aim is to make the rotational lattice auditable: a discrete engine for laten
 7. Baraniuk, Richard G., and Michael B. Wakin. "Random Projections of Smooth Manifolds." *Foundations of Computational Mathematics* 9, no. 1 (2009): 51–77.
 8. Nelson, Jelani. "Dimensionality Reduction." UC Berkeley lecture notes, August 1, 2022.
 9. Silwal, Sandeep. "Beyond Worst-Case Dimensionality Reduction for Sparse Vectors." arXiv preprint, 2023.
-10. Gilbert, Anna C., Martin J. Strauss, Joel A. Tropp, and Roman Vershynin. "One Sketch for All: Fast Algorithms for Compressed Sensing." In *Proceedings of the 39th Annual ACM Symposium on Theory of Computing*, 2007.
-11. Deng, Chengyuan, Jie Gao, Kevin Lu, Feng Luo, and Cheng Xin. "Johnson–Lindenstrauss Lemma Beyond Euclidean Geometry." arXiv preprint arXiv:2310.22491, 2023.
-12. Lim, Lek-Heng, Tetsuya Maehara, and Ken N. Smith. "Distortion Bounds for Spheres and the Borsuk–Ulam Frontier." Research manuscript, 2022.
-13. Dubois, Michel, and Laurent Schwartz. "Lower Bounds on Metric Distortion over Spheres." *Annales de l'Institut Fourier* 31, no. 3 (1981): 1–33.
-14. Burago, Dmitri, Yuri Burago, and Sergei Ivanov. *A Course in Metric Geometry*. American Mathematical Society, 2001.
-15. Gromov, Mikhail. *Metric Structures for Riemannian and Non-Riemannian Spaces*. Birkhäuser, 1999.
-16. Sturm, Karl-Theodor. "On the Geometry of Metric Measure Spaces." *Acta Mathematica* 196, no. 1 (2006): 65–131.
-17. Mémoli, Facundo. "The Gromov–Hausdorff Distance: A Brief Tutorial on Some of Its Quantitative Aspects." *Actes des rencontres du C.I.R.M.* 3, no. 1 (2013): 89–96.
-18. Popoff, Alexandre, Corentin Guichaoua, and Moreno Andreatta. "Composing (with) Automorphisms in the Colored Cube Dance: An Interactive Tool for Musical Chord Transformation." Manuscript, 2022.
-19. Brass, Peter. *Research Problems in Discrete Geometry*. Springer, 2005.
+10. Brass, Peter. *Research Problems in Discrete Geometry*. Springer, 2005.
+11. Gilbert, Anna C., Martin J. Strauss, Joel A. Tropp, and Roman Vershynin. "One Sketch for All: Fast Algorithms for Compressed Sensing." In *Proceedings of the 39th Annual ACM Symposium on Theory of Computing*, 2007.
+12. Deng, Chengyuan, Jie Gao, Kevin Lu, Feng Luo, and Cheng Xin. "Johnson–Lindenstrauss Lemma Beyond Euclidean Geometry." arXiv preprint arXiv:2310.22491, 2023.
+13. Lim, Lek-Heng, Tetsuya Maehara, and Ken N. Smith. "Distortion Bounds for Spheres and the Borsuk–Ulam Frontier." Research manuscript, 2022.
+14. Dubois, Michel, and Laurent Schwartz. "Lower Bounds on Metric Distortion over Spheres." *Annales de l'Institut Fourier* 31, no. 3 (1981): 1–33.
+15. Burago, Dmitri, Yuri Burago, and Sergei Ivanov. *A Course in Metric Geometry*. American Mathematical Society, 2001.
+16. Gromov, Mikhail. *Metric Structures for Riemannian and Non-Riemannian Spaces*. Birkhäuser, 1999.
+17. Sturm, Karl-Theodor. "On the Geometry of Metric Measure Spaces." *Acta Mathematica* 196, no. 1 (2006): 65–131.
+18. Mémoli, Facundo. "The Gromov–Hausdorff Distance: A Brief Tutorial on Some of Its Quantitative Aspects." *Actes des rencontres du C.I.R.M.* 3, no. 1 (2013): 89–96.
+19. Popoff, Alexandre, Corentin Guichaoua, and Moreno Andreatta. "Composing (with) Automorphisms in the Colored Cube Dance: An Interactive Tool for Musical Chord Transformation." Manuscript, 2022.
