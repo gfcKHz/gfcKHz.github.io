@@ -6,6 +6,23 @@ hide:
 
 I grabbed my headphones (Sony WH-1000XM4) and listened to one of my favorite songs by On Broken Wings called [The Spawning of Progression](https://youtu.be/8NwDQzapNhE?t=170). After saving the track as a wav (via the sample chrome extension) and uploading it to a stem splitter (moises), the isolated bass revealed something unexpected. What initially seemed like a hidden tonal [state](https://on.soundcloud.com/VgpbeVAbJzqlP0JCuu) (maybe a pitch inversion of the noise at the end of the song), turned out to be an artifact: a reconstruction (hallucinated) of the original sample by the autoencoder in the stem splitter. 
 
+<div class="sc-inline-player">
+  <iframe
+    title="Shadow Tonnetz track"
+    width="100%"
+    height="140"
+    scrolling="no"
+    frameborder="no"
+    allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2212604000&color=%23050505&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+  </iframe>
+  <div class="sc-player-meta">
+    <a href="https://soundcloud.com/daejjeon" title="crocodile" target="_blank" rel="noopener">crocodile</a>
+    <span> · </span>
+    <a href="https://soundcloud.com/daejjeon/shadow-tonnetz" title="Shadow Tonnetz" target="_blank" rel="noopener">Shadow Tonnetz</a>
+  </div>
+</div>
+
 After listening to the whole song, there are wind chimes faintly present at the beginning that I think correspond to the sound I was hearing towards the end (with the bass isolated). Ultimately, this is important because this reframing of the source material rotates the perceptual modality we operate from by shifting not just what is heard in tonal space but where one is positioned relative to the source and its constituent decompositions, revealing different transformations.
 
 ### Johnson–Lindenstrauss
@@ -37,26 +54,6 @@ Coltrane’s circle of tones is a tonnetz in disguise (a 12-node rotational latt
 
 The aim is to make the rotational lattice auditable: a discrete engine for latent space where any combination of stems respects both the Heilbronn area budget and the tonnetz symmetries. Hardware micro-fluctuations (drift, jitter, PLL relock cadence) feed into the lattice as auxiliary coordinates, so the stem splitter behaves like an audio side-channel: every hallucinated stem carries the user's geometric and hardware [fingerprint](entropy.md). 
 
-### Listen
-
-<div class="sc-inline-player">
-  <iframe
-    title="Johnson–Lindenstrauss track"
-    width="100%"
-    height="166"
-    scrolling="no"
-    frameborder="no"
-    allow="autoplay"
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2211134558&color=%23050505&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-  </iframe>
-  <div class="sc-player-meta">
-    <a href="https://soundcloud.com/daejjeon" title="crocodile" target="_blank" rel="noopener">crocodile</a>
-    <span> · </span>
-    <a href="https://soundcloud.com/daejjeon/cm-transform" title="Johnson–Lindenstrauss" target="_blank" rel="noopener">Johnson–Lindenstrauss</a>
-  </div>
-</div>
-
----
 
 ## References
 
