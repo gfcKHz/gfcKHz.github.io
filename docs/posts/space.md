@@ -37,6 +37,22 @@ Coltrane’s circle of tones is a tonnetz in disguise (a 12-node rotational latt
 
 The aim is to make the rotational lattice auditable: a discrete engine for latent space where any combination of stems respects both the Heilbronn area budget and the tonnetz symmetries. Hardware micro-fluctuations (drift, jitter, PLL relock cadence) feed into the lattice as auxiliary coordinates, so the stem splitter behaves like an audio side-channel: every hallucinated stem carries the user's geometric and hardware [fingerprint](entropy.md). 
 
+<div class="sc-inline-player">
+  <iframe
+    width="100%"
+    height="166"
+    scrolling="no"
+    frameborder="no"
+    allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2211134558&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+  </iframe>
+  <div class="sc-player-meta">
+    <a href="https://soundcloud.com/daejjeon" title="crocodile" target="_blank" rel="noopener">crocodile</a>
+    <span> · </span>
+    <a href="https://soundcloud.com/daejjeon/cm-transform" title="Johnson–Lindenstrauss" target="_blank" rel="noopener">Johnson–Lindenstrauss</a>
+  </div>
+</div>
+
 ---
 
 ## References
