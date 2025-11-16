@@ -107,3 +107,4 @@ The aim is to keep the rotational lattice auditable: a discrete engine for laten
 18. Mémoli, Facundo. "The Gromov–Hausdorff Distance: A Brief Tutorial on Some of Its Quantitative Aspects." *Actes des rencontres du C.I.R.M.* 3, no. 1 (2013): 89–96.
 19. Popoff, Alexandre, Corentin Guichaoua, and Moreno Andreatta. "Composing (with) Automorphisms in the Colored Cube Dance: An Interactive Tool for Musical Chord Transformation." Manuscript, 2022.
 20. Shao, Chenze, Darren Li, Fandong Meng, and Jie Zhou. "Continuous Autoregressive Language Models." arXiv preprint, 2024.
+21. Wolfram, Stephen. "I Have a Theory Too: The Challenge and Opportunity of Avocational Science." August 2025. https://writings.stephenwolfram.com/2025/08/i-have-a-theory-too-the-challenge-and-opportunity-of-avocational-science/. [Framework for keeping hobby-grade theory accountable]
