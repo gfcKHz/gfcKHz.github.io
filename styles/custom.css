@@ -300,6 +300,37 @@ html {
   color: rgba(0, 0, 0, 0.45);
 }
 
+.moises-figure {
+  margin: 2rem auto 3rem;
+  width: min(560px, 100%);
+  text-align: center;
+}
+
+.moises-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+[data-md-color-scheme="default"] .moises-figure img {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.moises-figure figcaption {
+  font-size: 0.76rem;
+  font-weight: 500;
+  margin-top: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+[data-md-color-scheme="default"] .moises-figure figcaption {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .md-footer,
 [data-md-component="footer"],
 .md-footer__inner,
