@@ -10,13 +10,7 @@ Entropy is just instrumentation with variance we can audit. Frequency, jitter, a
 
 ### Stem Splitting as Entropy
 
-Logic Pro’s stem splitter rewrites the exact same story on the audio side. Its ML pipeline (drums, bass, vocals, other) runs entirely on-device, so every decomposition lives inside the same trusted compute boundary as an RTL-SDR capture. When the model hallucinates a wind-chime texture into the isolated bass, that artifact isn’t random—it carries quantization noise, memory access cadence, and floating-point drift from the autoencoder. The splitter becomes another instrumentation channel whose fluctuations persist with the stems it emits.
-
-That makes an easy parallel to the RF fluctuation vector:  
-- RF captures trace oscillator drift, PLL relock cadence, mixer jitter.  
-- Stem separation traces reconstruction artifacts, phase coherence errors, attention head preferences.
-
-Just like we log carrier drift and CNR, we can log reconstruction fidelity from Logic: spectral roll-off deltas between stems and the full mix, residual phase offsets, or consistency of repeated runs. Every reduction pass—whether it’s whitening an FM capture or partitioning a song into stems—doubles as a witness channel for the processing chain. Treat the built-in splitter as a black box with a measurable entropy budget, run tracks through multiple times, and the variance becomes part of the capture fingerprint.
+Logic Pro’s stem splitter rewrites the exact same story on the audio side. Its ML pipeline (drums, bass, vocals, other) runs entirely on-device, so every decomposition lives inside the same trusted compute boundary as an RTL-SDR capture. When the model hallucinates a wind-chime texture into the isolated bass, that artifact isn’t random (it carries quantization noise, memory access cadence, and floating-point drift from the autoencoder). The splitter becomes another instrumentation channel whose fluctuations persist with the stems it emits.
 
 ---
 

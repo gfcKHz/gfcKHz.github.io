@@ -62,5 +62,6 @@ nav:
   - Posts:
       - "Ghost in the Capture":
           - Introduction: posts/capture.md
+      - "Programmable Acoustic Alchemy":
           - Latent Space: posts/space.md
           - Entropy: posts/entropy.md
