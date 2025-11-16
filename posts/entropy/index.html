@@ -291,8 +291,6 @@
                 
   
   
-    
-  
   
   
     
@@ -302,11 +300,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
         
           
           <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
@@ -327,7 +325,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -365,6 +363,65 @@
   
 
               
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programmable Acoustic Alchemy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Programmable Acoustic Alchemy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -596,11 +653,7 @@
 <h3 id="micro-fluctuation">Micro-Fluctuation<a class="headerlink" href="#micro-fluctuation" title="Permanent link">&para;</a></h3>
 <p>Entropy is just instrumentation with variance we can audit. Frequency, jitter, and bias only count if they stay tethered to the hardware that emitted them, so every reduction pass doubles as a witness channel. Each capture leaves a meshed trail (carrier drift, mixer jitter, PLL recoveries) and those traces either count as entropy or expose the side channel. Every run emits the same fluctuation vector (drift, phase noise, temperature swing, supply ripple) and that packet rides with the data so any “fresh randomness” claim has to debit a specific line item. Persisting the trace lets us replay it through whitening, masking, or shuffling and watch the signature contract in real time. The log becomes the handshake between these captures and the RNG, EM, acoustic, and ML leakage literature cited below, so every knob turn ties back to an explicit threat model or countermeasure.</p>
 <h3 id="stem-splitting-as-entropy">Stem Splitting as Entropy<a class="headerlink" href="#stem-splitting-as-entropy" title="Permanent link">&para;</a></h3>
-<p>Logic Pro’s stem splitter rewrites the exact same story on the audio side. Its ML pipeline (drums, bass, vocals, other) runs entirely on-device, so every decomposition lives inside the same trusted compute boundary as an RTL-SDR capture. When the model hallucinates a wind-chime texture into the isolated bass, that artifact isn’t random—it carries quantization noise, memory access cadence, and floating-point drift from the autoencoder. The splitter becomes another instrumentation channel whose fluctuations persist with the stems it emits.</p>
-<p>That makes an easy parallel to the RF fluctuation vector:<br />
-- RF captures trace oscillator drift, PLL relock cadence, mixer jitter.<br />
-- Stem separation traces reconstruction artifacts, phase coherence errors, attention head preferences.</p>
-<p>Just like we log carrier drift and CNR, we can log reconstruction fidelity from Logic: spectral roll-off deltas between stems and the full mix, residual phase offsets, or consistency of repeated runs. Every reduction pass—whether it’s whitening an FM capture or partitioning a song into stems—doubles as a witness channel for the processing chain. Treat the built-in splitter as a black box with a measurable entropy budget, run tracks through multiple times, and the variance becomes part of the capture fingerprint.</p>
+<p>Logic Pro’s stem splitter rewrites the exact same story on the audio side. Its ML pipeline (drums, bass, vocals, other) runs entirely on-device, so every decomposition lives inside the same trusted compute boundary as an RTL-SDR capture. When the model hallucinates a wind-chime texture into the isolated bass, that artifact isn’t random (it carries quantization noise, memory access cadence, and floating-point drift from the autoencoder). The splitter becomes another instrumentation channel whose fluctuations persist with the stems it emits.</p>
 <hr />
 <h2 id="bibliography">Bibliography<a class="headerlink" href="#bibliography" title="Permanent link">&para;</a></h2>
 <ol>
