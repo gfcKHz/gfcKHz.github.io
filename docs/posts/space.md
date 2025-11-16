@@ -8,6 +8,23 @@ I grabbed my headphones (Sony WH-1000XM4) and listened to one of my favorite son
 
 After listening to the whole song, there are wind chimes faintly present at the beginning that I think correspond to the sound I was hearing towards the end (with the bass isolated). Ultimately, this is important because this reframing of the source material rotates the perceptual modality we operate from by shifting not just what is heard in tonal space but where one is positioned relative to the source and its constituent decompositions, revealing different transformations.
 
+---
+
+## We All Knew This Was Coming
+
+> So crazy thing I learned recently, was that most audio models don’t actually operate on audio at all. There are some bespoke ones that do, but the majority convert the audio to a spectrogram then pass that spectrogram into an image2* model. Img2img for new audio, reconstruct the spectrogram with encodec at the output layer. I have also been playing with that, re-representing patches of tokens as a unified vector, representing that vector in a pixel group, with some masked pixels for pattern learning. - SashimiSaketoro
+
+---
+
+> “Long-term, >99% of input and output for AI models will be [photons](https://x.com/elonmusk/status/1980430707706196359). Nothing else scales.”  
+> - Elon Musk replying to Andrej Karpathy on DeepSeek-OCR
+
+---
+
+So all the cool kids are beam [splitting](space.md) audio through pixel space and I'm late to the party as usual. This is when it naturally occurred to me that I haven't been paying attention to what's really going on (and it doesn't help that I don't even know where my glasses are right now). Perception is computationally bounded, and [vision](https://en.wikipedia.org/wiki/Human_echolocation#Ben_Underwood) transforms once the perceptual map reshapes to the relational geometry that emerges from constraints. Maybe I'm just intercepting a broadcast from a [CDMA downlink](https://cyclostationary.blog/2016/03/22/csp-estimators-the-strip-spectral-correlation-analyzer/), crossing the boundary William carved out of [coherence](https://cyclostationarity.com/wp-content/uploads/2022/12/202210131027.pdf). 
+
+---
+
 ### Johnson–Lindenstrauss
 
 The Johnson–Lindenstrauss lemma shows that a projection can preserve relational structure even when the coordinate system changes. Formally, for any $0<\varepsilon<1$ and finite $X \subset \mathbb{R}^n$ there exists $f: \mathbb{R}^n \rightarrow \mathbb{R}^k$, $k = O(\varepsilon^{-2} \log |X|)$, such that:
