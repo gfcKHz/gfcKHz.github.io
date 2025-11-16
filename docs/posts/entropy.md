@@ -8,9 +8,9 @@ hide:
 
 Entropy is just instrumentation with variance we can audit. Frequency, jitter, and bias only count if they stay tethered to the hardware that emitted them, so every reduction pass doubles as a witness channel. Each capture leaves a meshed trail (carrier drift, mixer jitter, PLL recoveries) and those traces either count as entropy or expose the side channel. Every run emits the same fluctuation vector (drift, phase noise, temperature swing, supply ripple) and that packet rides with the data so any “fresh randomness” claim has to debit a specific line item. Persisting the trace lets us replay it through whitening, masking, or shuffling and watch the signature contract in real time. The log becomes the handshake between these captures and the RNG, EM, acoustic, and ML leakage literature cited below, so every knob turn ties back to an explicit threat model or countermeasure.
 
-### Stem Splitting as Entropy
+### Local Instrumentation
 
-Logic Pro’s stem splitter rewrites the exact same story on the audio side. Its ML pipeline (drums, bass, vocals, other) runs entirely on-device, so every decomposition lives inside the same trusted compute boundary as an RTL-SDR capture. When the model hallucinates a wind-chime texture into the isolated bass, that artifact isn’t random (it carries quantization noise, memory access cadence, and floating-point drift from the autoencoder). The splitter becomes another instrumentation channel whose fluctuations persist with the stems it emits.
+Logic Pro’s stem splitter rewrites the same story on the audio side. Because its ML pipeline (drums, bass, vocals, other) runs entirely on-device, every decomposition happens inside the same hardware bubble as the rest of my DAW—no external model, API call, or hosted inference path. When the model hallucinates a wind-chime texture into the isolated bass, that artifact isn’t random; it carries quantization noise, memory access cadence, and floating-point drift from the autoencoder. The machinery becomes its own witness channel whose fluctuations persist with the stems it emits, mirroring the entropy bookkeeping from radio captures without overlapping their data paths. Local processing turns Logic into an audit-friendly instrument: I get entropy by proxy because the model’s variance is literally my hardware’s variance.
 
 ---
 
