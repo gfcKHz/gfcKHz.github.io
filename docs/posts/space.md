@@ -96,6 +96,7 @@ The aim is to keep the rotational lattice auditable: a discrete engine for laten
 6. Ailon, Nir, and Bernard Chazelle. "The Fast Johnson–Lindenstrauss Transform and Approximate Nearest Neighbors." *SIAM Journal on Computing* 39, no. 1 (2009): 302–322.
 7. Baraniuk, Richard G., and Michael B. Wakin. "Random Projections of Smooth Manifolds." *Foundations of Computational Mathematics* 9, no. 1 (2009): 51–77.
 8. Nelson, Jelani. "Dimensionality Reduction." UC Berkeley lecture notes, August 1, 2022.
+28. Mémoli, Facundo. "The Gromov–Hausdorff Distance: A Brief Tutorial on Some of Its Quantitative Aspects." *Actes des rencontres du C.I.R.M.* 3, no. 1 (2013): 89–96.
 9. Mazzola, Guerino. "From a Categorical Point of View: K-nets as Limit Denotators." 2006.
 10. Popoff, Alexandre. "Relational Poly-Klumpenhouwer Networks for Transformational and Voice-Leading Analysis." 2015.
 11. Piovan, Luis A. "A Tonnetz Model for Pentachords." *Journal of Mathematics and Music* 2014.
@@ -116,6 +117,5 @@ The aim is to keep the rotational lattice auditable: a discrete engine for laten
 25. Burago, Dmitri, Yuri Burago, and Sergei Ivanov. *A Course in Metric Geometry*. American Mathematical Society, 2001.
 26. Gromov, Mikhail. *Metric Structures for Riemannian and Non-Riemannian Spaces*. Birkhäuser, 1999.
 27. Sturm, Karl-Theodor. "On the Geometry of Metric Measure Spaces." *Acta Mathematica* 196, no. 1 (2006): 65–131.
-28. Mémoli, Facundo. "The Gromov–Hausdorff Distance: A Brief Tutorial on Some of Its Quantitative Aspects." *Actes des rencontres du C.I.R.M.* 3, no. 1 (2013): 89–96.
 29. Popoff, Alexandre, Corentin Guichaoua, and Moreno Andreatta. "Composing (with) Automorphisms in the Colored Cube Dance: An Interactive Tool for Musical Chord Transformation." Manuscript, 2022.
 30. Wolfram, Stephen. "I Have a Theory Too: The Challenge and Opportunity of Avocational Science." August 2025. https://writings.stephenwolfram.com/2025/08/i-have-a-theory-too-the-challenge-and-opportunity-of-avocational-science/. [Framework for keeping hobby-grade theory accountable]
