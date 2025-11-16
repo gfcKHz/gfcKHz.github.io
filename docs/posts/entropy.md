@@ -22,3 +22,4 @@ Logic Pro’s stem splitter rewrites the same story on the audio side. Because i
 4. Tokunaga, Claudio, and David Blaauw. "True Random Number Generator with a Metastability-Based Entropy Source." *IEEE Journal of Solid-State Circuits* 45, no. 1 (2010): 70–77.
 5. Kocher, Paul, Joshua Jaffe, and Benjamin Jun. "Differential Power Analysis." In *Advances in Cryptology – CRYPTO '99*, 1999.
 6. Cagli, Emanuele, Cécile Dumas, and Emmanuel Prouff. "Convolutional Neural Networks with Data Augmentation for Side-Channel Attacks." In *Proceedings of CHES*, 2017.
+7. Baez, John C. "What is Entropy?" *Azimuth Blog*, 2022. https://johncarlosbaez.wordpress.com/2022/05/22/what-is-entropy/.
