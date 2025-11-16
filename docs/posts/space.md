@@ -97,6 +97,10 @@ The aim is to keep the rotational lattice auditable: a discrete engine for laten
 7. Baraniuk, Richard G., and Michael B. Wakin. "Random Projections of Smooth Manifolds." *Foundations of Computational Mathematics* 9, no. 1 (2009): 51–77.
 8. Nelson, Jelani. "Dimensionality Reduction." UC Berkeley lecture notes, August 1, 2022.
 28. Mémoli, Facundo. "The Gromov–Hausdorff Distance: A Brief Tutorial on Some of Its Quantitative Aspects." *Actes des rencontres du C.I.R.M.* 3, no. 1 (2013): 89–96.
+20. Silwal, Sandeep. "Beyond Worst-Case Dimensionality Reduction for Sparse Vectors." arXiv preprint, 2023.
+21. Brass, Peter. *Research Problems in Discrete Geometry*. Springer, 2005.
+22. Deng, Chengyuan, Jie Gao, Kevin Lu, Feng Luo, and Cheng Xin. "Johnson–Lindenstrauss Lemma Beyond Euclidean Geometry." arXiv preprint arXiv:2310.22491, 2023.
+20. Silwal, Sandeep. "Beyond Worst-Case Dimensionality Reduction for Sparse Vectors." arXiv preprint, 2023.
 9. Mazzola, Guerino. "From a Categorical Point of View: K-nets as Limit Denotators." 2006.
 10. Popoff, Alexandre. "Relational Poly-Klumpenhouwer Networks for Transformational and Voice-Leading Analysis." 2015.
 11. Piovan, Luis A. "A Tonnetz Model for Pentachords." *Journal of Mathematics and Music* 2014.
@@ -108,10 +112,7 @@ The aim is to keep the rotational lattice auditable: a discrete engine for laten
 17. Fiore, Thomas M. "Morphisms of Generalized Interval Systems and PR-Groups." 2013.
 18. Capuzzo, Guy. "Neo-Riemannian Theory and the Analysis of Pop-Rock Music." *Journal of Music Theory* 2004.
 19. Chapkanov, Vesselin. *Transformational Analysis in Practice*. 2019.
-20. Silwal, Sandeep. "Beyond Worst-Case Dimensionality Reduction for Sparse Vectors." arXiv preprint, 2023.
-21. Brass, Peter. *Research Problems in Discrete Geometry*. Springer, 2005.
 21. Gilbert, Anna C., Martin J. Strauss, Joel A. Tropp, and Roman Vershynin. "One Sketch for All: Fast Algorithms for Compressed Sensing." In *Proceedings of the 39th Annual ACM Symposium on Theory of Computing*, 2007.
-22. Deng, Chengyuan, Jie Gao, Kevin Lu, Feng Luo, and Cheng Xin. "Johnson–Lindenstrauss Lemma Beyond Euclidean Geometry." arXiv preprint arXiv:2310.22491, 2023.
 23. Lim, Lek-Heng, Tetsuya Maehara, and Ken N. Smith. "Distortion Bounds for Spheres and the Borsuk–Ulam Frontier." Research manuscript, 2022.
 24. Dubois, Michel, and Laurent Schwartz. "Lower Bounds on Metric Distortion over Spheres." *Annales de l'Institut Fourier* 31, no. 3 (1981): 1–33.
 25. Burago, Dmitri, Yuri Burago, and Sergei Ivanov. *A Course in Metric Geometry*. American Mathematical Society, 2001.
