@@ -89,8 +89,9 @@ The aim is to keep the rotational lattice auditable: a discrete engine for laten
 
 1. Elhage, Nelson, et al. "Toy Models of Superposition." *Transformer Circuits*, 2022. https://transformer-circuits.pub/2022/toy_model/index.html.
 2. Anthropic. "Linebreaks: Spatial Structure in Language Models." *Transformer Circuits*, 2025. https://transformer-circuits.pub/2025/linebreaks/index.html.
-3. Hirschberg, D. S. "Algorithms for the Longest Common Subsequence Problem." *Journal of the ACM* 24, no. 4 (1977): 664–675.
-4. Baraniuk, Richard G., and Mark A. Davenport. "A Simple Proof of the Restricted Isometry Property for Random Matrices." *Constructive Approximation* 28, no. 3 (2008): 253–263.
+3. Shao, Chenze, Darren Li, Fandong Meng, and Jie Zhou. "Continuous Autoregressive Language Models." arXiv:2510.27688 (2025). [Continuous next-vector generation to increase semantic bandwidth per decoding step]
+4. Hirschberg, D. S. "Algorithms for the Longest Common Subsequence Problem." *Journal of the ACM* 24, no. 4 (1977): 664–675.
+5. Baraniuk, Richard G., and Mark A. Davenport. "A Simple Proof of the Restricted Isometry Property for Random Matrices." *Constructive Approximation* 28, no. 3 (2008): 253–263.
 5. Krahmer, Felix, and Rachel Ward. "New and Improved Johnson–Lindenstrauss Embeddings via the Restricted Isometry Property." *SIAM Journal on Mathematical Analysis* 43, no. 3 (2011): 1269–1281.
 6. Ailon, Nir, and Bernard Chazelle. "The Fast Johnson–Lindenstrauss Transform and Approximate Nearest Neighbors." *SIAM Journal on Computing* 39, no. 1 (2009): 302–322.
 7. Baraniuk, Richard G., and Michael B. Wakin. "Random Projections of Smooth Manifolds." *Foundations of Computational Mathematics* 9, no. 1 (2009): 51–77.
