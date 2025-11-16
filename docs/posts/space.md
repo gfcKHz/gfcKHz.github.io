@@ -12,7 +12,7 @@ After listening to the whole song, there are wind chimes faintly present at the 
 
 <figure class="moises-figure">
   <img src="../../assets/moises.png" alt="Moises stem-splitting output highlighting reconstruction artifacts" />
-  <figcaption>Moises stem split of “The Spawning of Progression.” The bass stem surfaced wind-chime artifacts the autoencoder hallucinated.</figcaption>
+  <figcaption>Moises stem split of “The Spawning of Progression.”</figcaption>
 </figure>
 
 ---
