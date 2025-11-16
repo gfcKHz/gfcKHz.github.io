@@ -108,3 +108,14 @@ The aim is to keep the rotational lattice auditable: a discrete engine for laten
 19. Popoff, Alexandre, Corentin Guichaoua, and Moreno Andreatta. "Composing (with) Automorphisms in the Colored Cube Dance: An Interactive Tool for Musical Chord Transformation." Manuscript, 2022.
 20. Shao, Chenze, Darren Li, Fandong Meng, and Jie Zhou. "Continuous Autoregressive Language Models." arXiv preprint, 2024.
 21. Wolfram, Stephen. "I Have a Theory Too: The Challenge and Opportunity of Avocational Science." August 2025. https://writings.stephenwolfram.com/2025/08/i-have-a-theory-too-the-challenge-and-opportunity-of-avocational-science/. [Framework for keeping hobby-grade theory accountable]
+22. Mazzola, Guerino. "From a Categorical Point of View: K-nets as Limit Denotators." 2006.
+23. Popoff, Alexandre. "Relational Poly-Klumpenhouwer Networks for Transformational and Voice-Leading Analysis." 2015.
+24. Piovan, Luis A. "A Tonnetz Model for Pentachords." *Journal of Mathematics and Music* 2014.
+25. Carey, Norman, and David Clampitt. "Dodecatonic Cycles and Parsimonious Voice Leading in the Mystic/Wozzeck Genus." *Music Theory Spectrum* 2017.
+26. Kozyra, Paweł M. "Mathematical Aspects of Musical Scales and Series." 2014.
+27. Mohanty, Vaibhav. "A 5-Dimensional Tonnetz for Nearly Symmetric Hexachords." 2018.
+28. Popoff, Alexandre. "Meter Networks." *Perspectives of New Music* 2020.
+29. Mazzola, Guerino. *Diagrams, Gestures, and Formulae in Music*. 2007.
+30. Fiore, Thomas M. "Morphisms of Generalized Interval Systems and P,R Groups." 2013.
+31. Capuzzo, Guy. "Neo-Riemannian Theory and the Analysis of Pop-Rock Music." *Journal of Music Theory* 2004.
+32. Chapkanov, Vesselin. *Transformational Analysis in Practice*. 2019.
