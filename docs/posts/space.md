@@ -95,27 +95,27 @@ The aim is to keep the rotational lattice auditable: a discrete engine for laten
 6. Ailon, Nir, and Bernard Chazelle. "The Fast Johnson–Lindenstrauss Transform and Approximate Nearest Neighbors." *SIAM Journal on Computing* 39, no. 1 (2009): 302–322.
 7. Baraniuk, Richard G., and Michael B. Wakin. "Random Projections of Smooth Manifolds." *Foundations of Computational Mathematics* 9, no. 1 (2009): 51–77.
 8. Nelson, Jelani. "Dimensionality Reduction." UC Berkeley lecture notes, August 1, 2022.
-9. Silwal, Sandeep. "Beyond Worst-Case Dimensionality Reduction for Sparse Vectors." arXiv preprint, 2023.
-10. Brass, Peter. *Research Problems in Discrete Geometry*. Springer, 2005.
-11. Gilbert, Anna C., Martin J. Strauss, Joel A. Tropp, and Roman Vershynin. "One Sketch for All: Fast Algorithms for Compressed Sensing." In *Proceedings of the 39th Annual ACM Symposium on Theory of Computing*, 2007.
-12. Deng, Chengyuan, Jie Gao, Kevin Lu, Feng Luo, and Cheng Xin. "Johnson–Lindenstrauss Lemma Beyond Euclidean Geometry." arXiv preprint arXiv:2310.22491, 2023.
-13. Lim, Lek-Heng, Tetsuya Maehara, and Ken N. Smith. "Distortion Bounds for Spheres and the Borsuk–Ulam Frontier." Research manuscript, 2022.
-14. Dubois, Michel, and Laurent Schwartz. "Lower Bounds on Metric Distortion over Spheres." *Annales de l'Institut Fourier* 31, no. 3 (1981): 1–33.
-15. Burago, Dmitri, Yuri Burago, and Sergei Ivanov. *A Course in Metric Geometry*. American Mathematical Society, 2001.
-16. Gromov, Mikhail. *Metric Structures for Riemannian and Non-Riemannian Spaces*. Birkhäuser, 1999.
-17. Sturm, Karl-Theodor. "On the Geometry of Metric Measure Spaces." *Acta Mathematica* 196, no. 1 (2006): 65–131.
-18. Mémoli, Facundo. "The Gromov–Hausdorff Distance: A Brief Tutorial on Some of Its Quantitative Aspects." *Actes des rencontres du C.I.R.M.* 3, no. 1 (2013): 89–96.
-19. Popoff, Alexandre, Corentin Guichaoua, and Moreno Andreatta. "Composing (with) Automorphisms in the Colored Cube Dance: An Interactive Tool for Musical Chord Transformation." Manuscript, 2022.
-20. Shao, Chenze, Darren Li, Fandong Meng, and Jie Zhou. "Continuous Autoregressive Language Models." arXiv preprint, 2024.
-21. Wolfram, Stephen. "I Have a Theory Too: The Challenge and Opportunity of Avocational Science." August 2025. https://writings.stephenwolfram.com/2025/08/i-have-a-theory-too-the-challenge-and-opportunity-of-avocational-science/. [Framework for keeping hobby-grade theory accountable]
-22. Mazzola, Guerino. "From a Categorical Point of View: K-nets as Limit Denotators." 2006.
-23. Popoff, Alexandre. "Relational Poly-Klumpenhouwer Networks for Transformational and Voice-Leading Analysis." 2015.
-24. Piovan, Luis A. "A Tonnetz Model for Pentachords." *Journal of Mathematics and Music* 2014.
-25. Carey, Norman, and David Clampitt. "Dodecatonic Cycles and Parsimonious Voice Leading in the Mystic/Wozzeck Genus." *Music Theory Spectrum* 2017.
-26. Kozyra, Paweł M. "Mathematical Aspects of Musical Scales and Series." 2014.
-27. Mohanty, Vaibhav. "A 5-Dimensional Tonnetz for Nearly Symmetric Hexachords." 2018.
-28. Popoff, Alexandre. "Meter Networks." *Perspectives of New Music* 2020.
-29. Mazzola, Guerino. *Diagrams, Gestures, and Formulae in Music*. 2007.
-30. Fiore, Thomas M. "Morphisms of Generalized Interval Systems and P,R Groups." 2013.
-31. Capuzzo, Guy. "Neo-Riemannian Theory and the Analysis of Pop-Rock Music." *Journal of Music Theory* 2004.
-32. Chapkanov, Vesselin. *Transformational Analysis in Practice*. 2019.
+9. Mazzola, Guerino. "From a Categorical Point of View: K-nets as Limit Denotators." 2006.
+10. Popoff, Alexandre. "Relational Poly-Klumpenhouwer Networks for Transformational and Voice-Leading Analysis." 2015.
+11. Piovan, Luis A. "A Tonnetz Model for Pentachords." *Journal of Mathematics and Music* 2014.
+12. Carey, Norman, and David Clampitt. "Dodecatonic Cycles and Parsimonious Voice Leading in the Mystic/Wozzeck Genus." *Music Theory Spectrum* 2017.
+13. Kozyra, Paweł M. "Mathematical Aspects of Musical Scales and Series." 2014.
+13. Mohanty, Vaibhav. "A 5-Dimensional Tonnetz for Nearly Symmetric Hexachords." 2018.
+15. Popoff, Alexandre. "Meter Networks." *Perspectives of New Music* 2020.
+16. Mazzola, Guerino. *Diagrams, Gestures, and Formulae in Music*. 2007.
+17. Fiore, Thomas M. "Morphisms of Generalized Interval Systems and PR-Groups." 2013.
+18. Capuzzo, Guy. "Neo-Riemannian Theory and the Analysis of Pop-Rock Music." *Journal of Music Theory* 2004.
+19. Chapkanov, Vesselin. *Transformational Analysis in Practice*. 2019.
+20. Silwal, Sandeep. "Beyond Worst-Case Dimensionality Reduction for Sparse Vectors." arXiv preprint, 2023.
+21. Brass, Peter. *Research Problems in Discrete Geometry*. Springer, 2005.
+21. Gilbert, Anna C., Martin J. Strauss, Joel A. Tropp, and Roman Vershynin. "One Sketch for All: Fast Algorithms for Compressed Sensing." In *Proceedings of the 39th Annual ACM Symposium on Theory of Computing*, 2007.
+22. Deng, Chengyuan, Jie Gao, Kevin Lu, Feng Luo, and Cheng Xin. "Johnson–Lindenstrauss Lemma Beyond Euclidean Geometry." arXiv preprint arXiv:2310.22491, 2023.
+23. Lim, Lek-Heng, Tetsuya Maehara, and Ken N. Smith. "Distortion Bounds for Spheres and the Borsuk–Ulam Frontier." Research manuscript, 2022.
+24. Dubois, Michel, and Laurent Schwartz. "Lower Bounds on Metric Distortion over Spheres." *Annales de l'Institut Fourier* 31, no. 3 (1981): 1–33.
+25. Burago, Dmitri, Yuri Burago, and Sergei Ivanov. *A Course in Metric Geometry*. American Mathematical Society, 2001.
+26. Gromov, Mikhail. *Metric Structures for Riemannian and Non-Riemannian Spaces*. Birkhäuser, 1999.
+27. Sturm, Karl-Theodor. "On the Geometry of Metric Measure Spaces." *Acta Mathematica* 196, no. 1 (2006): 65–131.
+28. Mémoli, Facundo. "The Gromov–Hausdorff Distance: A Brief Tutorial on Some of Its Quantitative Aspects." *Actes des rencontres du C.I.R.M.* 3, no. 1 (2013): 89–96.
+29. Popoff, Alexandre, Corentin Guichaoua, and Moreno Andreatta. "Composing (with) Automorphisms in the Colored Cube Dance: An Interactive Tool for Musical Chord Transformation." Manuscript, 2022.
+30. Shao, Chenze, Darren Li, Fandong Meng, and Jie Zhou. "Continuous Autoregressive Language Models." arXiv preprint, 2024.
+31. Wolfram, Stephen. "I Have a Theory Too: The Challenge and Opportunity of Avocational Science." August 2025. https://writings.stephenwolfram.com/2025/08/i-have-a-theory-too-the-challenge-and-opportunity-of-avocational-science/. [Framework for keeping hobby-grade theory accountable]
