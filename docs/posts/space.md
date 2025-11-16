@@ -8,6 +8,8 @@ I grabbed my headphones (Sony WH-1000XM4) and listened to one of my favorite son
 
 After listening to the whole song, there are wind chimes faintly present at the beginning that I think correspond to the sound I was hearing towards the end (with the bass isolated). Ultimately, this is important because this reframing of the source material rotates the perceptual modality we operate from by shifting not just what is heard in tonal space but where one is positioned relative to the source and its constituent decompositions, revealing different transformations.
 
+---
+
 <figure class="moises-figure">
   <img src="../../assets/moises.png" alt="Moises stem-splitting output highlighting reconstruction artifacts" />
   <figcaption>Moises stem split of “The Spawning of Progression.” The bass stem surfaced wind-chime artifacts the autoencoder hallucinated.</figcaption>
