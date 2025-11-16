@@ -6,7 +6,7 @@ hide:
 
 ### Micro-Fluctuation 
 
-Entropy is just instrumentation with variance we can audit. Frequency, jitter, and bias only count if they stay tethered to the hardware that emitted them, so every reduction pass doubles as a witness channel. Each capture leaves a meshed trail (carrier drift, mixer jitter, PLL recoveries) and those traces either count as entropy or expose the side channel. Every run emits the same fluctuation vector (drift, phase noise, temperature swing, supply ripple) and that packet rides with the data so any “fresh randomness” claim has to match a real fluctuation in the hardware which adds tiny fluctuations of its own, so I push that trace through whitening, masking, and shuffling to see which parts really belong to the machine. The log becomes the handshake between all these measurements; every knob turn is pinned to a readable signature instead of a hunch.
+Entropy is just instrumentation with variance we can audit. Frequency, jitter, and bias only count if they stay tethered to the hardware that emitted them, so every reduction pass doubles as a witness channel. Each capture leaves a meshed trail (carrier drift, mixer jitter, PLL recoveries) and those traces either count as entropy or expose the side channel. Every run emits the same fluctuation vector (drift, phase noise, temperature swing, supply ripple) and that packet rides with the data so any “fresh randomness” claim has to match a real fluctuation in the hardware which adds tiny fluctuations of its own, so I push that trace through whitening, masking, and shuffling to see which parts really belong to the machine.
 
 ### Local Instrumentation
 
