@@ -8,7 +8,7 @@ title: Ghost in the Capture
 
 ## Metal_SDR
 
-A measurement [tool](https://github.com/gfcKHz/Metal_SDR) for RF captures. SDR feeds SigMF logs, fingerprints extract deterministic metrics (peak interpolation, CNR, bandwidth, adjacent-channel rejection), and regression tests keep the math anchored to physics rather than intention. The sections below walk through the failure modes uncovered while building that pipeline and the corrections layered in so each capture carries defensible results.
+A measurement [tool](https://github.com/gfcKHz/Metal_SDR) for RF capture. SDR feeds SigMF logs, fingerprints extract deterministic metrics (peak interpolation, CNR, bandwidth, adjacent-channel rejection), and regression tests keep the math anchored to physics rather than intention. The sections below walk through the failure modes uncovered while building that pipeline and the corrections layered in so each capture carries defensible results.
 
 ---
 
